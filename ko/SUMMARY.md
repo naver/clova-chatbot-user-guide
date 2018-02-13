@@ -10,8 +10,8 @@
 
 * [개요](/Overview.md)
   * [Chatbot extension이란?](/Overview.md#WhatisChatBotExt)
-  * [동작 구조](#OperationStructure)
-  * [특징](#Features)
+  * [동작 구조](/Overview.md#OperationStructure)
+  * [특징](/Overview.md#Features)
 
 * [Chatbot 디자인 가이드라인](/Design/Design_Guideline_For_Chatbot_Extension.md)
   * [Interaction 모델 정의](/Design/Design_Guideline_For_Chatbot_Extension.md#DefineInteractionModel)

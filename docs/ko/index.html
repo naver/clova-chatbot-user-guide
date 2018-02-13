@@ -1,0 +1,702 @@
+
+<!DOCTYPE HTML>
+<html lang="ko" >
+    <head>
+        <title>Clova Chatbot extension 가이드</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="이 문서는 Clova가 제공하는 Chatbot extension과 이를 통해 간단한 대화나 문의 답변을 수행하는 서비스를 Clova로 제공하는 방법을 설명합니다.">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="NAVER Corp.">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-page-toc-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="Copyright.html" />
+    
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">About This Document</li>
+        
+        
+    
+        <li class="chapter active" data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    문서 정보
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="Copyright.html">
+            
+                <a href="Copyright.html">
+            
+                    
+                    저작권
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="Terms.html">
+            
+                <a href="Terms.html">
+            
+                    
+                    용어 및 약어
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Chatbot Extension Guide</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="Overview.html">
+            
+                <a href="Overview.html">
+            
+                    
+                    개요
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="Overview.html">
+            
+                <a href="Overview.html#WhatisChatBotExt">
+            
+                    
+                    Chatbot extension이란?
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="Overview.html">
+            
+                <a href="Overview.html#OperationStructure">
+            
+                    
+                    동작 구조
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3" data-path="Overview.html">
+            
+                <a href="Overview.html#Features">
+            
+                    
+                    특징
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="Design/Design_Guideline_For_Chatbot_Extension.html">
+            
+                <a href="Design/Design_Guideline_For_Chatbot_Extension.html">
+            
+                    
+                    Chatbot 디자인 가이드라인
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.2.1" data-path="Design/Design_Guideline_For_Chatbot_Extension.html">
+            
+                <a href="Design/Design_Guideline_For_Chatbot_Extension.html#DefineInteractionModel">
+            
+                    
+                    Interaction 모델 정의
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.2.1.1" data-path="Design/Design_Guideline_For_Chatbot_Extension.html">
+            
+                <a href="Design/Design_Guideline_For_Chatbot_Extension.html#TypeOfUserUtterance">
+            
+                    
+                    사용자 발화 유형
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.1.2" data-path="Design/Design_Guideline_For_Chatbot_Extension.html">
+            
+                <a href="Design/Design_Guideline_For_Chatbot_Extension.html#UtteranceExamples">
+            
+                    
+                    발화 예시
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.1.3" data-path="Design/Design_Guideline_For_Chatbot_Extension.html">
+            
+                <a href="Design/Design_Guideline_For_Chatbot_Extension.html#VariableDictionary">
+            
+                    
+                    변수 사전
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.1.4" data-path="Design/Design_Guideline_For_Chatbot_Extension.html">
+            
+                <a href="Design/Design_Guideline_For_Chatbot_Extension.html#ResponsesForEachUtteranceType">
+            
+                    
+                    발화 유형별 답변
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.2" data-path="Design/Design_Guideline_For_Chatbot_Extension.html">
+            
+                <a href="Design/Design_Guideline_For_Chatbot_Extension.html#Precautions">
+            
+                    
+                    유의사항
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.3" data-path="Design/Design_Guideline_For_Chatbot_Extension.html">
+            
+                <a href="Design/Design_Guideline_For_Chatbot_Extension.html#ContinuousUpdate">
+            
+                    
+                    지속적인 업데이트
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" >
+            
+                <span>
+            
+                    
+                    Clova developer console
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.3.1" >
+            
+                <span>
+            
+                    
+                    Chatbot extension 등록하기
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.3.1.1" >
+            
+                <span>
+            
+                    
+                    이용 약관 및 개인 정보 수집 동의
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.1.2" >
+            
+                <span>
+            
+                    
+                    Extension 기본 정보 입력
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.2" >
+            
+                <span>
+            
+                    
+                    Interaction 모델 등록하기
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.3.2.1" >
+            
+                <span>
+            
+                    
+                    발화 유형 추가하기
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.2.2" >
+            
+                <span>
+            
+                    
+                    발화 예시 추가하기
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.2.3" >
+            
+                <span>
+            
+                    
+                    답변 추가하기
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.3" >
+            
+                <span>
+            
+                    
+                    Chatbot extension 테스트하기
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.3.3.1" >
+            
+                <span>
+            
+                    
+                    Interaction 모델 빌드하기
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.3.2" >
+            
+                <span>
+            
+                    
+                    Interaction 모델 테스트하기
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.3.3" >
+            
+                <span>
+            
+                    
+                    Clova 앱으로 extension 테스트하기
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.4" >
+            
+                <span>
+            
+                    
+                    Chatbote xtension 배포하기
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.3.4.1" >
+            
+                <span>
+            
+                    
+                    배포 정보 입력
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.4.2" >
+            
+                <span>
+            
+                    
+                    개인 정보 및 규정 준수 정보 입력
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.4.3" >
+            
+                <span>
+            
+                    
+                    심사 신청하기
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.5" >
+            
+                <span>
+            
+                    
+                    Extension 업데이트하기
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.6" >
+            
+                <span>
+            
+                    
+                    Extension 중지 및 삭제하기
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            GitBook에 게시
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >문서 정보</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#xBB38;&#xC11C;-&#xC815;&#xBCF4;">&#xBB38;&#xC11C; &#xC815;&#xBCF4;</h1>
+<p>&quot;&#xC774; &#xBB38;&#xC11C;&#xB294; Clova&#xAC00; &#xC81C;&#xACF5;&#xD558;&#xB294; Chatbot extension&#xACFC; &#xC774;&#xB97C; &#xD1B5;&#xD574; &#xAC04;&#xB2E8;&#xD55C; &#xB300;&#xD654;&#xB098; &#xBB38;&#xC758; &#xB2F5;&#xBCC0;&#xC744; &#xC218;&#xD589;&#xD558;&#xB294; &#xC11C;&#xBE44;&#xC2A4;&#xB97C; Clova&#xB85C; &#xC81C;&#xACF5;&#xD558;&#xB294; &#xBC29;&#xBC95;&#xC744; &#xC124;&#xBA85;&#xD569;&#xB2C8;&#xB2E4;. &#xB300;&#xC0C1; &#xB3C5;&#xC790;&#xB294; Clova Chatbot extension&#xC744; &#xC774;&#xC6A9;&#xD558;&#xC5EC; &#xC0AC;&#xC6A9;&#xC790;&#xC640; &#xAC04;&#xB2E8;&#xD55C; &#xB300;&#xD654;&#xB97C; &#xC218;&#xD589;&#xD558;&#xB294; &#xC11C;&#xBE44;&#xC2A4;&#xB97C; &#xB9CC;&#xB4E4;&#xAC70;&#xB098; &#xACE0;&#xAC1D; &#xC9C0;&#xC6D0;&#xC744; &#xC704;&#xD574; &#xBB38;&#xC758;&#xC5D0; &#xB300;&#xD55C; &#xB2F5;&#xBCC0; &#xC11C;&#xBE44;&#xC2A4;&#xB97C; &#xC81C;&#xACF5;&#xD558;&#xB824;&#xB294; &#xC11C;&#xBE44;&#xC2A4; &#xB2F4;&#xB2F9;&#xC790;&#xC785;&#xB2C8;&#xB2E4;.</p>
+<div class="note">
+  <p><strong>Note!</strong></p>
+  <p>Clova Chatbot extension&#xC740; &#xAC1C;&#xBC1C;&#xC774; &#xACC4;&#xC18D; &#xC9C4;&#xD589;&#xB418;&#xACE0; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;. &#xB530;&#xB77C;&#xC11C;, &#xBB38;&#xC11C;&#xC758; &#xB0B4;&#xC6A9;&#xC740; &#xC5B8;&#xC81C;&#xB4E0;&#xC9C0; &#xBCC0;&#xACBD;&#xB420; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+</div>
+
+<h2 id="&#xC5F0;&#xB77D;&#xCC98;">&#xC5F0;&#xB77D;&#xCC98;</h2>
+<p>&#xBB38;&#xC11C;&#xC640; &#xAD00;&#xB828;&#xD558;&#xC5EC; &#xAD81;&#xAE08;&#xD55C; &#xC0AC;&#xD56D;&#xC740; &#xC9C0;&#xC815;&#xB41C; Clova &#xC81C;&#xD734; &#xB2F4;&#xB2F9;&#xC790;&#xC5D0;&#xAC8C; &#xBB38;&#xC758;&#xD569;&#xB2C8;&#xB2E4;.</p>
+<h2 id="&#xBB38;&#xC11C;-&#xBC84;&#xC804;-&#xBC0F;-&#xBCC0;&#xACBD;-&#xC774;&#xB825;">&#xBB38;&#xC11C; &#xBC84;&#xC804; &#xBC0F; &#xBCC0;&#xACBD; &#xC774;&#xB825;</h2>
+<p>&#xC774; &#xBB38;&#xC11C;&#xC758; &#xBC84;&#xC804;&#xC740; v0.1&#xC774;&#xBA70;, &#xBCC0;&#xACBD; &#xC774;&#xB825;&#xC740; &#xB2E4;&#xC74C;&#xACFC; &#xAC19;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<table>
+<thead>
+<tr>
+<th>&#xBC84;&#xC804;</th>
+<th>&#xBC30;&#xD3EC; &#xC77C;&#xC790;</th>
+<th>&#xC774;&#xB825; &#xC0AC;&#xD56D;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>v0.1</td>
+<td>2018-02-12</td>
+<td>&#xCD08;&#xC548; &#xCD5C;&#xCD08; &#xC791;&#xC131;</td>
+</tr>
+</tbody>
+</table>
+
+                                
+                                </section>
+                            
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                
+                <a href="Copyright.html" class="navigation navigation-next navigation-unique" aria-label="Next page: 저작권">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"문서 정보","level":"1.1","depth":1,"next":{"title":"저작권","level":"1.2","depth":1,"path":"Copyright.md","ref":"Copyright.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-search","toggle-children","page-toc-button"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"page-toc-button":{"maxTocDepth":4,"minTocSize":2},"toggle-children":{},"highlight":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"NAVER Corp.","pdf":{"pageNumbers":true,"fontSize":11,"fontFamily":"Arial","paperSize":"a3","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":30,"left":30,"top":40,"bottom":40}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"ClassifiedInfo":"대외비","DocVersion":"v0.1","TargetCountryCode":"KR","DocOwner":"NAVER","OrientedService":"NAVER","TargetServiceForClientAuth":"NAVER","ReleaseYear":"2018","DevConsole":{}},"title":"Clova Chatbot extension 가이드","language":"ko","gitbook":"*","description":"이 문서는 Clova가 제공하는 Chatbot extension과 이를 통해 간단한 대화나 문의 답변을 수행하는 서비스를 Clova로 제공하는 방법을 설명합니다.","direction":"ltr"},"file":{"path":"README.md","mtime":"2018-02-13T01:51:12.268Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-02-13T02:40:45.735Z"},"basePath":".","book":{"language":"ko"}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-toggle-children/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-page-toc-button/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
