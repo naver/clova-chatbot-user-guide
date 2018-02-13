@@ -150,7 +150,7 @@ NAVER 서비스=NAVER 메일, NAVER 카페, NAVER 블로그, NAVER 뮤직
 <table>
   <thead>
     <tr>
-      <th width="15%">서비스 형태</th><thwidth="15%">발화 유형 분류</th><thwidth="35%">발화 예시</th><th width="35%">답변</th>
+      <th width="15%">서비스 형태</th><thwidth="15%">발화 유형 분류</th><th width="35%">발화 예시</th><th width="35%">답변</th>
     </tr>
   </thead>
   <tbody>
