@@ -192,8 +192,6 @@ NAVER 서비스=NAVER 메일, NAVER 카페, NAVER 블로그, NAVER 뮤직
   </tbody>
 </table>
 
-표현은 조금씩 다르지만 같은 답변을 가지는 발화 예시를
-
 ## 유의사항 {#Precautions}
 
 Extension을 설계할 때 다음과 같은 사회적인 또는 법적인 문제가 없는지 미리 파악하여 문제가 발생하지 않도록 반드시 주의해야 합니다. Extension을 설계하는 단계뿐만 아니라 extension을 Clova에 등록하거나 배포할 때에도 아래 사항을 한 번 더 검토할 것을 권고합니다.
