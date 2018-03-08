@@ -27,7 +27,7 @@ To build a documentation, following next steps:
 1. Clone this repository.
 
 ```bash
-git clone https://oss.navercorp.com/JTF-P6/platform_technical_doc.git
+git clone https://oss.navercorp.com/JTF-P6/chatbot_technical_doc/.git
 ```
 2. (Required one time) Install required gitbook plugins.
 
