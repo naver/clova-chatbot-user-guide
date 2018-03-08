@@ -4,15 +4,13 @@
 ## Chatbot extension이란? {#WhatisChatBotExt}
 Chatbot extension은 Clova를 통해 사용자의 간단한 대화 요청이나 문의에 대해 답변하는 extension입니다. 주로, 사업이나 서비스의 고객 센터로 자주 유입되는 고객 문의를 처리하거나 소위 "심심이류"라고 하는 말벗 서비스와 같이 사용자와 간단히 대화하는 챗봇(Chatbot)서비스를 제공하는데 사용됩니다.
 
-TBD - 컨셉 다이어그램
-![](/CEK/Resources/Images/CEK_Concept_Diagram.png)
+![](/Resources/Images/Clova_Chatbot_Extension_Concept_Diagram.png)
 
 ## 동작 구조 {#OperationStructure}
 
-Clova는 클라이언트로부터 입력된 사용자의 발화를 인식하며, 사용자의 발화를 분석합니다. 분석된 발화가 Chatbot extension이 처리할 내용이라면 Clova는 분석된 사용자의 발화 정보를 Chatbot extension에게 전달합니다. Chatbot extension은 미리 [등록된 interaction 모델]()을 참조하여 사용자의 발화 유형을 확인하며, 발화 유형마다 작성해 놓은 답변을 Clova가 사용자에게 전달하도록 요청합니다.
+Clova는 클라이언트로부터 입력된 사용자의 발화를 인식하며, 사용자의 발화를 분석합니다. 분석된 발화가 Chatbot extension이 처리할 내용이라면 Clova는 분석된 사용자의 발화 정보를 Chatbot extension에게 전달합니다. Chatbot extension은 미리 [등록된 interaction 모델](/Design/Design_Guideline_For_Chatbot_Extension.md#DefineInteractionModel)을 참조하여 사용자의 발화 유형을 확인하며, 발화 유형마다 작성해 놓은 답변을 Clova가 사용자에게 전달하도록 요청합니다.
 
-TBD - 컨셉 다이어그램
-![](/CEK/Resources/Images/CEK_Interaction_Structure.png)
+![](/Resources/Images/Clova_Chatbot_Extension_Operation_Structure.png)
 
 ## 특징 {#Features}
 
