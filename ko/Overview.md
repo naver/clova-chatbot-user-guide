@@ -2,7 +2,7 @@
 이 문서는 Clova Chatbot extension(이하 Chatbot extension)에 대해 자세히 설명합니다. 이 문서를 통해 Chatbot extension이 무엇이고 어떻게 동작하는지 파악할 수 있으며, Chatbot extension과 관련된 가이드를 제공합니다.
 
 ## Chatbot extension이란? {#WhatisChatBotExt}
-Chatbot extension은 Clova를 통해 사용자의 간단한 대화 요청이나 문의에 대해 답변하는 extension입니다. 주로, 사업이나 서비스의 고객 센터로 자주 유입되는 고객 문의를 처리하거나 소위 "심심이류"라고 하는 말벗 서비스와 같이 사용자와 간단히 대화하는 챗봇(Chatbot)서비스를 제공하는데 사용됩니다.
+Chatbot extension은 [Clova](../guide)를 통해 사용자의 간단한 대화 요청이나 문의에 대해 답변하는 extension입니다. 주로, 사업이나 서비스의 고객 센터로 자주 유입되는 고객 문의를 처리하거나 소위 "심심이류"라고 하는 말벗 서비스와 같이 사용자와 간단히 대화하는 챗봇(Chatbot)서비스를 제공하는데 사용됩니다.
 
 ![](/Resources/Images/Clova_Chatbot_Extension_Concept_Diagram.png)
 
