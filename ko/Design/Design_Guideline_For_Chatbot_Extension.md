@@ -1,6 +1,6 @@
 # Extension 디자인 가이드라인
 
-Chatbot extension은 Clova를 통해 사용자에게 고객 지원 도움말이나 간단한 대화 서비스를 제공할 수 있습니다. 이 문서는 사용자에게 건전하고 유익한 서비스를 제공하기 위해 Chatbot extension을 설계할 때 어떤 사항을 지키거나 따라야 하는지 가이드라인을 제공합니다. 참고로 여기서 다루는 내용은 Chatbot extension 설계의 기본 권장 사항이며 간단한 예시와 함께 설명하고 있습니다.
+Chatbot extension은 Clova를 통해 사용자에게 고객 지원 도움말이나 간단한 대화 서비스를 제공할 수 있습니다. 이 문서는 사용자에게 건전하고 유익한 서비스를 제공하기 위해 chatbot extension을 설계할 때 어떤 사항을 지키거나 따라야 하는지 가이드라인을 제공합니다. 참고로 여기서 다루는 내용은 chatbot extension 설계의 기본 권장 사항이며 간단한 예시와 함께 설명하고 있습니다.
 
 * [Interaction 모델 정의](#DefineInteractionModel)
 * [유의사항](#Precautions)
@@ -215,6 +215,6 @@ Extension을 설계할 때 다음과 같은 사회적인 또는 법적인 문제
 
 ## 지속적인 업데이트 {#ContinuousUpdate}
 
-Chatbot extension을 개발할 때 사용자가 입력한 발화 유형의 발화 예시에 맞게 발화를 하지 않을 수도 있습니다. 사용자들이 실제 이용하는 방식가 차이가 있을 수 있고 사용자의 모든 사용 패턴을 대변했다고 할 수 없습니다. 즉, 사용자는 예상과 다르게 Chatbot extension을 사용하려고 할 수 있습니다. 따라서, Chatbot extension을 배포한 이후에도 Chatbot extension의 발화 유형이나 발화 예시를 지속적으로 개선하는 활동을 해야 사용자의 만족도를 향상시킬 수 있습니다.
+Chatbot extension을 개발할 때 사용자가 입력한 발화 유형의 발화 예시에 맞게 발화를 하지 않을 수도 있습니다. 사용자들이 실제 이용하는 방식가 차이가 있을 수 있고 사용자의 모든 사용 패턴을 대변했다고 할 수 없습니다. 즉, 사용자는 예상과 다르게 chatbot extension을 사용하려고 할 수 있습니다. 따라서, chatbot extension을 배포한 이후에도 chatbot extension의 발화 유형이나 발화 예시를 지속적으로 개선하는 활동을 해야 사용자의 만족도를 향상시킬 수 있습니다.
 
-Chatbot extension 등록한 후 Clova 플랫폼이 제공하는 통계 데이터나 유입된 사용자 발화 기록(추후 제공 예정) 분석하여 꾸준히 Chatbot extension을 업데이트해야 합니다.
+Chatbot extension 등록한 후 Clova 플랫폼이 제공하는 통계 데이터나 유입된 사용자 발화 기록(추후 제공 예정) 분석하여 꾸준히 chatbot extension을 업데이트해야 합니다.

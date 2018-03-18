@@ -11,7 +11,6 @@
 * [개요](/Overview.md)
   * [Chatbot extension이란?](/Overview.md#WhatisChatBotExt)
   * [동작 구조](/Overview.md#OperationStructure)
-  * [특징](/Overview.md#Features)
 
 * [Chatbot 디자인 가이드라인](/Design/Design_Guideline_For_Chatbot_Extension.md)
   * [Interaction 모델 정의](/Design/Design_Guideline_For_Chatbot_Extension.md#DefineInteractionModel)
@@ -22,21 +21,22 @@
   * [유의사항](/Design/Design_Guideline_For_Chatbot_Extension.md#Precautions)
   * [지속적인 업데이트](/Design/Design_Guideline_For_Chatbot_Extension.md#ContinuousUpdate)
 
-* Clova developer console
-  * Chatbot extension 등록하기
-    * 이용 약관 및 개인 정보 수집 동의
-    * Extension 기본 정보 입력
-  * Interaction 모델 등록하기
-    * 발화 유형 추가하기
-    * 발화 예시 추가하기
-    * 답변 추가하기
-  * Chatbot extension 테스트하기
-    * Interaction 모델 빌드하기
-    * Interaction 모델 테스트하기
-    * Clova 앱으로 extension 테스트하기
-  * Chatbote xtension 배포하기
-    * 배포 정보 입력
-    * 개인 정보 및 규정 준수 정보 입력
-    * 심사 신청하기
-  * Extension 업데이트하기
-  * Extension 중지 및 삭제하기
+* [Clova developer console](/DevConsole/ClovaDevConsole_Overview.md)
+  * [CEK Menu 사용하기](/DevConsole/Guides/CEK/Using_CEK_Menu.md)
+    * [Chatbot extension 등록하기](/DevConsole/Guides/CEK/Register_Chatbot_Extension.md)
+      * [이용 약관 및 개인 정보 수집 동의](/DevConsole/Guides/CEK/Register_Chatbot_Extension.md#AgreeTermsOfUse)
+      * [Chatbot extension 기본 정보 입력](/DevConsole/Guides/CEK/Register_Chatbot_Extension.md#InputExtensionInfo)
+    * [Interaction 모델 등록하기](/DevConsole/Guides/CEK/Register_Interaction_Model.md)
+      * [사용자 발화 유형 추가하기](/DevConsole/Guides/CEK/Register_Interaction_Model.md#AddUserRequestType)
+      * [부가적인 답변 및 정보 제공하기](/DevConsole/Guides/CEK/Register_Interaction_Model.md#ProvideAdditionalResponsesAndInfo)
+      * [사전 추가하기](/DevConsole/Guides/CEK/Register_Interaction_Model.md#AddDictionary)
+    * [Chatbot extension 테스트하기](/DevConsole/Guides/CEK/Test_Chatbot_Extension.md)
+      * [Interaction 모델 빌드하기](/DevConsole/Guides/CEK/Test_Chatbot_Extension.md#BuildInteractionModel)
+      * [Interaction 모델 테스트하기](/DevConsole/Guides/CEK/Test_Chatbot_Extension.md#TestInteractionModel)
+      * [Clova 앱으로 extension 테스트하기](/DevConsole/Guides/CEK/Test_Chatbot_Extension.md#TestOnClovaApp)
+    * [Chatbot extension 배포하기](/DevConsole/Guides/CEK/Deploy_Chatbot_Extension.md)
+      * [배포 정보 입력](/DevConsole/Guides/CEK/Deploy_Chatbot_Extension.md#InputDeploymentInfo)
+      * [개인 정보 및 규정 준수 정보 입력](/DevConsole/Guides/CEK/Deploy_Chatbot_Extension.md#InputComplianceInfo)
+      * [심사 신청하기](/DevConsole/Guides/CEK/Deploy_Chatbot_Extension.md#RequestExtensionSubmission)
+    * [Chatbot extension 업데이트하기](/DevConsole/Guides/CEK/Update_Chatbot_Extension.md)
+    * [Chatbot extension 중지 및 삭제하기](/DevConsole/Guides/CEK/Remove_Chatbot_Extension.md)
