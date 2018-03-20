@@ -1,0 +1,872 @@
+
+<!DOCTYPE HTML>
+<html lang="ko" >
+    <head>
+        <title>Clova Chatbot extension 가이드</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="이 문서는 Clova가 제공하는 Chatbot extension과 이를 통해 간단한 대화나 문의 답변을 수행하는 서비스를 Clova로 제공하는 방법을 설명합니다.">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="NAVER Corporation">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-page-toc-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="Design_Guideline_For_Chatbot_Extension.html" />
+    
+    
+    <link rel="prev" href="../Overview.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">About This Document</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    문서 정보
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../Copyright.html">
+            
+                <a href="../Copyright.html">
+            
+                    
+                    저작권
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../Terms.html">
+            
+                <a href="../Terms.html">
+            
+                    
+                    용어 및 약어
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Chatbot Extension Guide</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../Overview.html">
+            
+                <a href="../Overview.html">
+            
+                    
+                    개요
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="../Overview.html">
+            
+                <a href="../Overview.html#WhatisChatBotExt">
+            
+                    
+                    Chatbot extension이란?
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="../Overview.html">
+            
+                <a href="../Overview.html#OperationStructure">
+            
+                    
+                    동작 구조
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.2" data-path="Design_Guideline_For_Chatbot_Extension.html">
+            
+                <a href="Design_Guideline_For_Chatbot_Extension.html">
+            
+                    
+                    Chatbot 디자인 가이드라인
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.2.1" data-path="Design_Guideline_For_Chatbot_Extension.html">
+            
+                <a href="Design_Guideline_For_Chatbot_Extension.html#DefineInteractionModel">
+            
+                    
+                    Interaction 모델 정의
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.2.1.1" data-path="Design_Guideline_For_Chatbot_Extension.html">
+            
+                <a href="Design_Guideline_For_Chatbot_Extension.html#TypeOfUserUtterance">
+            
+                    
+                    사용자 발화 유형
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.1.2" data-path="Design_Guideline_For_Chatbot_Extension.html">
+            
+                <a href="Design_Guideline_For_Chatbot_Extension.html#UtteranceExamples">
+            
+                    
+                    발화 예시
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.1.3" data-path="Design_Guideline_For_Chatbot_Extension.html">
+            
+                <a href="Design_Guideline_For_Chatbot_Extension.html#VariableDictionary">
+            
+                    
+                    변수 사전
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.1.4" data-path="Design_Guideline_For_Chatbot_Extension.html">
+            
+                <a href="Design_Guideline_For_Chatbot_Extension.html#ResponsesForEachUtteranceType">
+            
+                    
+                    발화 유형별 답변
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.2" data-path="Design_Guideline_For_Chatbot_Extension.html">
+            
+                <a href="Design_Guideline_For_Chatbot_Extension.html#Precautions">
+            
+                    
+                    유의사항
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.3" data-path="Design_Guideline_For_Chatbot_Extension.html">
+            
+                <a href="Design_Guideline_For_Chatbot_Extension.html#ContinuousUpdate">
+            
+                    
+                    지속적인 업데이트
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../DevConsole/ClovaDevConsole_Overview.html">
+            
+                <a href="../DevConsole/ClovaDevConsole_Overview.html">
+            
+                    
+                    Clova developer console
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.3.1" data-path="../DevConsole/Guides/CEK/Using_CEK_Menu.html">
+            
+                <a href="../DevConsole/Guides/CEK/Using_CEK_Menu.html">
+            
+                    
+                    CEK Menu 사용하기
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.3.1.1" data-path="../DevConsole/Guides/CEK/Register_Chatbot_Extension.html">
+            
+                <a href="../DevConsole/Guides/CEK/Register_Chatbot_Extension.html">
+            
+                    
+                    Chatbot extension 등록하기
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.3.1.1.1" data-path="../DevConsole/Guides/CEK/Register_Chatbot_Extension.html">
+            
+                <a href="../DevConsole/Guides/CEK/Register_Chatbot_Extension.html#AgreeTermsOfUse">
+            
+                    
+                    이용 약관 및 개인 정보 수집 동의
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.1.1.2" data-path="../DevConsole/Guides/CEK/Register_Chatbot_Extension.html">
+            
+                <a href="../DevConsole/Guides/CEK/Register_Chatbot_Extension.html#InputExtensionInfo">
+            
+                    
+                    Chatbot extension 기본 정보 입력
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.1.2" data-path="../DevConsole/Guides/CEK/Register_Interaction_Model.html">
+            
+                <a href="../DevConsole/Guides/CEK/Register_Interaction_Model.html">
+            
+                    
+                    Interaction 모델 등록하기
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.3.1.2.1" data-path="../DevConsole/Guides/CEK/Register_Interaction_Model.html">
+            
+                <a href="../DevConsole/Guides/CEK/Register_Interaction_Model.html#AddUserRequestType">
+            
+                    
+                    사용자 발화 유형 추가하기
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.1.2.2" data-path="../DevConsole/Guides/CEK/Register_Interaction_Model.html">
+            
+                <a href="../DevConsole/Guides/CEK/Register_Interaction_Model.html#AddResponsesAndURLInfo">
+            
+                    
+                    답변 및 URL 정보 추가하기
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.1.2.3" data-path="../DevConsole/Guides/CEK/Register_Interaction_Model.html">
+            
+                <a href="../DevConsole/Guides/CEK/Register_Interaction_Model.html#AddDictionary">
+            
+                    
+                    사전 추가하기
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.1.2.4" data-path="../DevConsole/Guides/CEK/Register_Interaction_Model.html">
+            
+                <a href="../DevConsole/Guides/CEK/Register_Interaction_Model.html#ConfigureResponseSettings">
+            
+                    
+                    응답 설정하기
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.1.3" data-path="../DevConsole/Guides/CEK/Test_Chatbot_Extension.html">
+            
+                <a href="../DevConsole/Guides/CEK/Test_Chatbot_Extension.html">
+            
+                    
+                    Chatbot extension 테스트하기
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.3.1.3.1" data-path="../DevConsole/Guides/CEK/Test_Chatbot_Extension.html">
+            
+                <a href="../DevConsole/Guides/CEK/Test_Chatbot_Extension.html#BuildInteractionModel">
+            
+                    
+                    Interaction 모델 빌드하기
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.1.3.2" data-path="../DevConsole/Guides/CEK/Test_Chatbot_Extension.html">
+            
+                <a href="../DevConsole/Guides/CEK/Test_Chatbot_Extension.html#TestInteractionModel">
+            
+                    
+                    Interaction 모델 테스트하기
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.1.3.3" data-path="../DevConsole/Guides/CEK/Test_Chatbot_Extension.html">
+            
+                <a href="../DevConsole/Guides/CEK/Test_Chatbot_Extension.html#TestOnClovaApp">
+            
+                    
+                    Clova 앱으로 chatbot extension 테스트하기
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.1.4" data-path="../DevConsole/Guides/CEK/Deploy_Chatbot_Extension.html">
+            
+                <a href="../DevConsole/Guides/CEK/Deploy_Chatbot_Extension.html">
+            
+                    
+                    Chatbot extension 배포하기
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.3.1.4.1" data-path="../DevConsole/Guides/CEK/Deploy_Chatbot_Extension.html">
+            
+                <a href="../DevConsole/Guides/CEK/Deploy_Chatbot_Extension.html#InputDeploymentInfo">
+            
+                    
+                    배포 정보 입력
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.1.4.2" data-path="../DevConsole/Guides/CEK/Deploy_Chatbot_Extension.html">
+            
+                <a href="../DevConsole/Guides/CEK/Deploy_Chatbot_Extension.html#InputComplianceInfo">
+            
+                    
+                    개인 정보 및 규정 준수 정보 입력
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.1.4.3" data-path="../DevConsole/Guides/CEK/Deploy_Chatbot_Extension.html">
+            
+                <a href="../DevConsole/Guides/CEK/Deploy_Chatbot_Extension.html#RequestExtensionSubmission">
+            
+                    
+                    심사 신청하기
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.1.5" data-path="../DevConsole/Guides/CEK/Update_Chatbot_Extension.html">
+            
+                <a href="../DevConsole/Guides/CEK/Update_Chatbot_Extension.html">
+            
+                    
+                    Chatbot extension 업데이트하기
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.1.6" data-path="../DevConsole/Guides/CEK/Remove_Chatbot_Extension.html">
+            
+                <a href="../DevConsole/Guides/CEK/Remove_Chatbot_Extension.html">
+            
+                    
+                    Chatbot extension 중지 및 삭제하기
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            GitBook에 게시
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Chatbot 디자인 가이드라인</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="extension-&#xB514;&#xC790;&#xC778;-&#xAC00;&#xC774;&#xB4DC;&#xB77C;&#xC778;">Extension &#xB514;&#xC790;&#xC778; &#xAC00;&#xC774;&#xB4DC;&#xB77C;&#xC778;</h1>
+<p>Chatbot extension&#xC740; Clova&#xB97C; &#xD1B5;&#xD574; &#xC0AC;&#xC6A9;&#xC790;&#xC5D0;&#xAC8C; &#xACE0;&#xAC1D; &#xC9C0;&#xC6D0; &#xB3C4;&#xC6C0;&#xB9D0;&#xC774;&#xB098; &#xAC04;&#xB2E8;&#xD55C; &#xB300;&#xD654; &#xC11C;&#xBE44;&#xC2A4;&#xB97C; &#xC81C;&#xACF5;&#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;. &#xC774; &#xBB38;&#xC11C;&#xB294; &#xC0AC;&#xC6A9;&#xC790;&#xC5D0;&#xAC8C; &#xAC74;&#xC804;&#xD558;&#xACE0; &#xC720;&#xC775;&#xD55C; &#xC11C;&#xBE44;&#xC2A4;&#xB97C; &#xC81C;&#xACF5;&#xD558;&#xAE30; &#xC704;&#xD574; chatbot extension&#xC744; &#xC124;&#xACC4;&#xD560; &#xB54C; &#xC5B4;&#xB5A4; &#xC0AC;&#xD56D;&#xC744; &#xC9C0;&#xD0A4;&#xAC70;&#xB098; &#xB530;&#xB77C;&#xC57C; &#xD558;&#xB294;&#xC9C0; &#xAC00;&#xC774;&#xB4DC;&#xB77C;&#xC778;&#xC744; &#xC81C;&#xACF5;&#xD569;&#xB2C8;&#xB2E4;. &#xCC38;&#xACE0;&#xB85C; &#xC5EC;&#xAE30;&#xC11C; &#xB2E4;&#xB8E8;&#xB294; &#xB0B4;&#xC6A9;&#xC740; chatbot extension &#xC124;&#xACC4;&#xC758; &#xAE30;&#xBCF8; &#xAD8C;&#xC7A5; &#xC0AC;&#xD56D;&#xC774;&#xBA70; &#xAC04;&#xB2E8;&#xD55C; &#xC608;&#xC2DC;&#xC640; &#xD568;&#xAED8; &#xC124;&#xBA85;&#xD558;&#xACE0; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<ul>
+<li><a href="#DefineInteractionModel">Interaction &#xBAA8;&#xB378; &#xC815;&#xC758;</a></li>
+<li><a href="#Precautions">&#xC720;&#xC758;&#xC0AC;&#xD56D;</a></li>
+<li><a href="#ContinuousUpdate">&#xC9C0;&#xC18D;&#xC801;&#xC778; &#xC5C5;&#xB370;&#xC774;&#xD2B8;</a></li>
+</ul>
+<h2 id="DefineInteractionModel">Interaction &#xBAA8;&#xB378; &#xC815;&#xC758; </h2>
+<p>Chatbot extension&#xC758; interaction &#xBAA8;&#xB378;&#xC744; &#xC815;&#xC758;&#xD558;&#xB294; &#xAC83;&#xC740; &#xC0AC;&#xC6A9;&#xC790; &#xBC1C;&#xD654; &#xC720;&#xD615;&#xC744; &#xC815;&#xC758;&#xD558;&#xACE0; &#xBC1C;&#xD654; &#xC720;&#xD615;&#xC5D0; &#xB530;&#xB77C; &#xBC1C;&#xD654; &#xC608;&#xC2DC;&#xC640; &#xADF8;&#xC5D0; &#xC0C1;&#xC751;&#xD558;&#xB294; &#xB2F5;&#xBCC0;&#xC744; &#xC815;&#xC758;&#xD558;&#xB294; &#xAC83;&#xC785;&#xB2C8;&#xB2E4;. &#xB2E4;&#xC74C;&#xACFC; &#xAC19;&#xC740; &#xB0B4;&#xC6A9;&#xC744; &#xC815;&#xC758;&#xD574;&#xC57C; &#xD569;&#xB2C8;&#xB2E4;.</p>
+<ul>
+<li><a href="#TypeOfUserUtterance">&#xC0AC;&#xC6A9;&#xC790; &#xBC1C;&#xD654; &#xC720;&#xD615;</a></li>
+<li><a href="#UtteranceExamples">&#xBC1C;&#xD654; &#xC608;&#xC2DC;</a></li>
+<li><a href="#VariableDictionary">&#xBCC0;&#xC218; &#xC0AC;&#xC804;</a></li>
+<li><a href="#ResponsesForEachUtteranceType">&#xBC1C;&#xD654; &#xC720;&#xD615;&#xBCC4; &#xB2F5;&#xBCC0;</a></li>
+</ul>
+<h3 id="DefineTypeOfUserUtterance">&#xC0AC;&#xC6A9;&#xC790; &#xBC1C;&#xD654; &#xC720;&#xD615; </h3>
+<p>Chatbot extension&#xC758; interaction &#xBAA8;&#xB378;&#xC744; &#xC815;&#xC758;&#xD560; &#xB54C; &#xAC00;&#xC7A5; &#xBA3C;&#xC800; &#xD560; &#xC77C;&#xC740; chatbot extension&#xC774; &#xB300;&#xC751;&#xD574;&#xC57C; &#xD560; &#xC0AC;&#xC6A9;&#xC790; &#xBC1C;&#xD654;&#xC758; &#xC720;&#xD615;&#xC744; &#xC815;&#xC758;&#xD558;&#xB294; &#xAC83;&#xC785;&#xB2C8;&#xB2E4;. &#xC0AC;&#xC6A9;&#xC790;&#xC758; &#xBC1C;&#xD654; &#xC720;&#xD615;&#xC740; &#xAC19;&#xC740; &#xC720;&#xD615;&#xC758; <a href="#UtteranceExamples">&#xBC1C;&#xD654; &#xC608;&#xC2DC;</a>&#xC5D0; &#xC5B4;&#xB5A4; <a href="#ResponsesForEachUtteranceType">&#xB2F5;&#xBCC0;</a>&#xD560; &#xAC83;&#xC778;&#xC9C0; &#xB098;&#xB204;&#xB294; &#xB17C;&#xB9AC;&#xC801; &#xB2E8;&#xC704;&#xAC00; &#xB429;&#xB2C8;&#xB2E4;. &#xC608;&#xB97C; &#xB4E4;&#xBA74;, &#xD68C;&#xC6D0;&#xC81C;&#xB85C; &#xC6B4;&#xC601;&#xD558;&#xB294; &#xC1FC;&#xD551;&#xBAB0; &#xC11C;&#xBE44;&#xC2A4;&#xC758; &#xACE0;&#xAC1D; &#xBB38;&#xC758;&#xC5D0; &#xB300;&#xC751;&#xD558;&#xB294; Chattbot extension&#xC744; &#xB9CC;&#xB4E0;&#xB2E4;&#xACE0; &#xAC00;&#xC815;&#xD558;&#xBA74; &#xB2E4;&#xC74C;&#xACFC; &#xAC19;&#xC740; &#xC0AC;&#xC6A9;&#xC790;&#xC758; &#xBB38;&#xC758;&#xAC00; &#xB4E4;&#xC5B4;&#xC628;&#xB2E4;&#xACE0; &#xC815;&#xC758;&#xD558;&#xAC70;&#xB098; &#xC608;&#xCE21;&#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;. &#xC774;&#xB7F0; &#xB958;&#xC758; &#xC11C;&#xBE44;&#xC2A4;&#xB294; &#xBC1C;&#xD654; &#xC720;&#xD615;&#xC744; &#xD1B5;&#xD574; &#xC815;&#xBCF4;&#xB97C; &#xC81C;&#xACF5;&#xD558;&#xB294; &#xBAA9;&#xC801;&#xC73C;&#xB85C; &#xC0AC;&#xC6A9;&#xC790;&#xC640; &#xB300;&#xD654;&#xD558;&#xAC8C; &#xB429;&#xB2C8;&#xB2E4;.</p>
+<pre><code>* &#xD68C;&#xC6D0; &#xAD00;&#xB828; &#xBB38;&#xC758;
+  * &#xAC00;&#xC785; &#xBB38;&#xC758;
+  * &#xACC4;&#xC815; &#xCC3E;&#xAE30; &#xBB38;&#xC758;
+  * &#xD68C;&#xC6D0; &#xC815;&#xBCF4; &#xBCC0;&#xACBD; &#xBB38;&#xC758;
+  * &#xD0C8;&#xD1F4; &#xBB38;&#xC758;
+* &#xACB0;&#xC81C; &#xBB38;&#xC758;
+  * &#xC0C1;&#xD488; &#xAD6C;&#xC785; &#xBC29;&#xBC95;
+  * &#xCFE0;&#xD3F0; &#xC0AC;&#xC6A9;/&#xC801;&#xB9BD;&#xAE08; &#xC0AC;&#xC6A9; &#xBC29;&#xBC95;
+  * &#xC8FC;&#xBB38; &#xC815;&#xBCF4; &#xD655;&#xC778; &#xBC29;&#xBC95;
+  * &#xC0C1;&#xD488; &#xD658;&#xBD88; &#xBC29;&#xBC95;
+* &#xBC30;&#xC1A1; &#xBB38;&#xC758;
+  * &#xBC30;&#xC1A1; &#xC870;&#xD68C; &#xBC29;&#xBC95;
+  * &#xBC30;&#xC1A1;&#xC9C0; &#xBCC0;&#xACBD; &#xBC29;&#xBC95;
+  * &#xBC18;&#xD488; &#xBC29;&#xBC95;
+...
+</code></pre><p>&#xB610;&#xB294;, &#xB9D0;&#xBC97; &#xC11C;&#xBE44;&#xC2A4;&#xC640; &#xAC19;&#xC774; &#xAC04;&#xB2E8;&#xD55C; &#xB300;&#xD654; &#xC11C;&#xBE44;&#xC2A4;&#xB97C; &#xC81C;&#xACF5;&#xD55C;&#xB2E4;&#xACE0; &#xD558;&#xBA74; &#xB2E4;&#xC74C;&#xACFC; &#xAC19;&#xC774; &#xBC1C;&#xD654; &#xC720;&#xD615;&#xC744; &#xC815;&#xC758;&#xD574;&#xBCFC; &#xC218;&#xB3C4; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;. &#xC774;&#xB54C;&#xB294; &#xC8FC;&#xB85C; &#xCE5C;&#xAD50;&#xB098; &#xC815;&#xC11C; &#xD45C;&#xD604;&#xC758; &#xBAA9;&#xC801;&#xC73C;&#xB85C; &#xC0AC;&#xC6A9;&#xC790;&#xC640; &#xB300;&#xD654;&#xD558;&#xAC8C; &#xB429;&#xB2C8;&#xB2E4;.</p>
+<pre><code>* &#xC778;&#xC0AC;
+  * &#xC2DC;&#xC791;/&#xC548;&#xBD80; &#xC778;&#xC0AC;
+  * &#xC791;&#xBCC4; &#xC778;&#xC0AC;
+* &#xC18C;&#xAC1C;
+  * &#xC0AC;&#xC6A9;&#xC790; &#xBCF8;&#xC778; &#xC18C;&#xAC1C;
+  * &#xCC57;&#xBD07; &#xC18C;&#xAC1C; &#xC694;&#xCCAD;
+    * &#xCC57;&#xBD07; &#xC774;&#xB984; &#xC694;&#xCCAD;
+    * &#xCC57;&#xBD07; &#xC131;&#xBCC4; &#xC694;&#xCCAD;
+    * &#xCC57;&#xBD07; &#xB098;&#xC774; &#xC694;&#xCCAD;
+    * &#xCC57;&#xBD07; &#xAC70;&#xC8FC;&#xC9C0; &#xC694;&#xCCAD;
+  * &#xCC57;&#xBD07; &#xC774;&#xC6A9; &#xBC29;&#xBC95; &#xC694;&#xCCAD;
+* &#xC815;&#xC11C;&#xC801;&#xC778; &#xD45C;&#xD604;
+  * &#xC0AC;&#xC6A9;&#xC790;&#xAC00; &#xAE30;&#xC068;&#xC744; &#xD45C;&#xCD9C;&#xD558;&#xB294; &#xC720;&#xD615;
+  * &#xC0AC;&#xC6A9;&#xC790;&#xAC00; &#xBD84;&#xB178;&#xB97C; &#xD45C;&#xCD9C;&#xD558;&#xB294; &#xC720;&#xD615;
+  * &#xC0AC;&#xC6A9;&#xC790;&#xAC00; &#xD638;&#xAC10;&#xC744; &#xD45C;&#xCD9C;&#xD558;&#xB294; &#xC720;&#xD615;
+  * &#xC0AC;&#xC6A9;&#xC790;&#xAC00; &#xC2AC;&#xD514;&#xC744; &#xD45C;&#xCD9C;&#xD558;&#xB294; &#xC720;&#xD615;
+...
+</code></pre><h3 id="UtteranceExamples">&#xBC1C;&#xD654; &#xC608;&#xC2DC; </h3>
+<p>Chatbot extension&#xC774; &#xB300;&#xC751;&#xD560; &#xC0AC;&#xC6A9;&#xC790;&#xC758; <a href="#DefineTypeOfUserUtterance">&#xBC1C;&#xD654; &#xC720;&#xD615;&#xC744; &#xC815;&#xC758;</a>&#xD588;&#xB2E4;&#xBA74; &#xAC01; &#xC720;&#xD615;&#xBCC4;&#xB85C; &#xC5B4;&#xB5A4; &#xC0AC;&#xC6A9;&#xC790;&#xC758; &#xC694;&#xCCAD;&#xC774; &#xB4E4;&#xC5B4;&#xC62C;&#xC9C0; &#xBC1C;&#xD654; &#xC608;&#xC2DC;&#xB97C; &#xC791;&#xC131;&#xD569;&#xB2C8;&#xB2E4;. &#xD558;&#xB098;&#xC758; &#xBC1C;&#xD654; &#xC720;&#xD615;&#xC5D0;&#xB294; <strong>&#xAC19;&#xC740; &#xB2F5;&#xBCC0;&#xC744; &#xAC00;&#xC9C8; &#xC218; &#xC788;&#xB294; &#xBAA8;&#xB4E0; &#xBC1C;&#xD654; &#xC608;&#xC2DC;</strong>&#xB97C; &#xC791;&#xC131;&#xD558;&#xBA74; &#xB429;&#xB2C8;&#xB2E4;. &#xBC1C;&#xD654; &#xC608;&#xC2DC;&#xB97C; &#xC791;&#xC131;&#xD560; &#xB54C;&#xB294; &#xB2E4;&#xC74C;&#xC744; &#xACE0;&#xB824;&#xD558;&#xC5EC; &#xC791;&#xC131;&#xD560; &#xAC83;&#xC744; &#xAD8C;&#xC7A5;&#xD569;&#xB2C8;&#xB2E4;.</p>
+<ul>
+<li>&#xBB38;&#xC5B4;&#xCCB4;&#xBCF4;&#xB2E4;&#xB294; &#xAD6C;&#xC5B4;&#xCCB4;&#xB85C; &#xC791;&#xC131;&#xD569;&#xB2C8;&#xB2E4;.</li>
+<li>&#xAC19;&#xC740; &#xC758;&#xB3C4;&#xB97C; &#xC9C0;&#xB154;&#xC9C0;&#xB9CC; &#xB2E4;&#xB978; &#xBC29;&#xC2DD;&#xC73C;&#xB85C; &#xD45C;&#xD604;&#xC774; &#xB418;&#xB294; &#xBC1C;&#xD654; &#xC608;&#xC2DC;&#xB97C; &#xB9CE;&#xC774; &#xC785;&#xB825;&#xD574;&#xC57C; &#xD569;&#xB2C8;&#xB2E4;.</li>
+<li>&#xBC1C;&#xD654; &#xC608;&#xC2DC; &#xC791;&#xC131; &#xAC1C;&#xC218;&#xB294; &#xBC1C;&#xD654; &#xC720;&#xD615;&#xB2F9; 10~15&#xAC1C;&#xB97C; &#xC791;&#xC131;&#xD574;&#xC57C; &#xD569;&#xB2C8;&#xB2E4;.</li>
+<li>&#xBC18;&#xBCF5;&#xC801;&#xC778; &#xD328;&#xD134;&#xC758; &#xD45C;&#xD604;&#xC740; &#xD53C;&#xD558;&#xACE0; &#xB2E4;&#xC591;&#xD55C; &#xBCC0;&#xD615;&#xC744; &#xC8FC;&#xC5B4; &#xBC1C;&#xD654; &#xC608;&#xC2DC;&#xB97C; &#xC791;&#xC131;&#xD569;&#xB2C8;&#xB2E4;. &#xC774; &#xBD80;&#xBD84;&#xC5D0; &#xB300;&#xD574;&#xC11C;&#xB294; <a href="#VariableDictionary">&#xBCC0;&#xC218; &#xC0AC;&#xC804;</a>&#xC5D0;&#xC11C; &#xB2E4;&#xB8F9;&#xB2C8;&#xB2E4;.</li>
+<li>&#xC704; &#xAE30;&#xC900;&#xC73C;&#xB85C; &#xBC1C;&#xD654; &#xC608;&#xC2DC;&#xB97C; &#xC785;&#xB825;&#xD55C; &#xD6C4; &#xC0C8;&#xB85C;&#xC6B4; &#xD45C;&#xD604;&#xC774; &#xC0DD;&#xAE30;&#xAC70;&#xB098; &#xC778;&#xC2DD;&#xC774; &#xC798; &#xC548; &#xB418;&#xB294; &#xD45C;&#xD604;&#xC744; &#xBC1C;&#xACAC;&#xD560; &#xB54C;&#xB9C8;&#xB2E4; &#xBC1C;&#xD654; &#xC608;&#xC2DC;&#xB97C; &#xCD94;&#xAC00;&#xD558;&#xB294; &#xAC83;&#xC774; &#xC88B;&#xC2B5;&#xB2C8;&#xB2E4;.</li>
+</ul>
+<p>&#xC55E;&#xC11C; &#xC5B8;&#xAE09;&#xD588;&#xB358; &#xBC1C;&#xD654; &#xC720;&#xD615; &#xC608; &#xC911;&#xC5D0; &#xBC1C;&#xD654; &#xC720;&#xD615;&#xC774; &quot;&#xAC00;&#xC785; &#xBB38;&#xC758;&quot;&#xC5D0; &#xD574;&#xB2F9;&#xD558;&#xB294; &#xBC1C;&#xD654; &#xC608;&#xC2DC;&#xB97C; &#xC791;&#xC131;&#xD574;&#xBCF4;&#xBA74; &#xB2E4;&#xC74C;&#xACFC; &#xAC19;&#xC744; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<pre><code>&#xD68C;&#xC6D0; &#xAC00;&#xC785;&#xD558;&#xACE0; &#xC2F6;&#xC5B4;&#xC694;.
+&#xD68C;&#xC6D0; &#xAC00;&#xC785; &#xBC29;&#xBC95;&#xC744; &#xC54C;&#xB824;&#xC8FC;&#xC138;&#xC694;.
+&#xD68C;&#xC6D0; &#xAC00;&#xC785;&#xD558;&#xB824;&#xBA74; &#xC5B4;&#xB5BB;&#xAC8C;&#xD574;&#xC57C; &#xD558;&#xB098;&#xC694;?
+&#xBA64;&#xBC84; &#xB4F1;&#xB85D;&#xD558;&#xACE0; &#xC2F6;&#xC5B4;&#xC694;.
+&#xBA64;&#xBC84; &#xB4F1;&#xB85D; &#xBC29;&#xBC95;&#xC744; &#xC54C;&#xB824;&#xC8FC;&#xC138;&#xC694;.
+&#xBA64;&#xBC84; &#xB4F1;&#xB85D;&#xD558;&#xB824;&#xBA74; &#xC5B4;&#xB5BB;&#xAC8C;&#xD574;&#xC57C; &#xD558;&#xB098;&#xC694;?
+&#xACC4;&#xC815; &#xC0DD;&#xC131;&#xD558;&#xACE0; &#xC2F6;&#xC5B4;&#xC694;.
+&#xACC4;&#xC815; &#xC0DD;&#xC131; &#xBC29;&#xBC95;&#xC744; &#xC54C;&#xB824;&#xC8FC;&#xC138;&#xC694;.
+&#xACC4;&#xC815; &#xC0DD;&#xC131;&#xD558;&#xB824;&#xBA74; &#xC5B4;&#xB5BB;&#xAC8C;&#xD574;&#xC57C; &#xD558;&#xB098;&#xC694;?
+...
+</code></pre><p>&quot;&#xAC00;&#xC785; &#xBB38;&#xC758;&quot; &#xBC1C;&#xD654; &#xC720;&#xD615;&#xC5D0;&#xB294; &#xC815;&#xB9D0; &#xB2E4;&#xC591;&#xD55C; &#xD45C;&#xD604;&#xC774; &#xC788;&#xC744; &#xC218; &#xC788;&#xC73C;&#xBA70;, &#xC704;&#xC5D0; &#xC791;&#xC131;&#xB41C; &#xBC1C;&#xD654; &#xC608;&#xC2DC;&#xB294; &#xD45C;&#xD604;&#xC740; &#xB2E4;&#xB974;&#xC9C0;&#xB9CC; &#xBAA8;&#xB450; &#xAC19;&#xC740; &#xC758;&#xBBF8;&#xB97C; &#xC9C0;&#xB2C8;&#xBA70;, &#xAC19;&#xC740; &#xB2F5;&#xBCC0;&#xC73C;&#xB85C; &#xB300;&#xC751;&#xD560; &#xC218; &#xC788;&#xC74C;&#xC744; &#xD30C;&#xC545;&#xD560; &#xC218; &#xC788;&#xB2E4;. &#xC774;&#xB7F0; &#xC2DD;&#xC73C;&#xB85C; &quot;&#xAC00;&#xC785; &#xBB38;&#xC758;&quot;&#xC5D0; &#xD574;&#xB2F9;&#xD558;&#xB294; &#xBC1C;&#xD654; &#xC608;&#xC2DC; &#xBFD0;&#xB9CC; &#xC544;&#xB2C8;&#xB77C; &#xC815;&#xC758;&#xD55C; &#xBC1C;&#xD654; &#xC720;&#xD615;&#xC5D0; &#xB9DE;&#xB294; &#xBC1C;&#xD654; &#xC608;&#xC2DC;&#xB97C; &#xC791;&#xC131;&#xD574;&#xC57C; &#xD55C;&#xB2E4;.</p>
+<h3 id="VariableDictionary">&#xBCC0;&#xC218; &#xC0AC;&#xC804; </h3>
+<p>&#xBC1C;&#xD654; &#xC608;&#xC2DC;&#xB97C; &#xC791;&#xC131;&#xD558;&#xB2E4;&#xBCF4;&#xBA74; &#xC608;&#xC2DC;&#xBB38;&#xC774; &#xD2B9;&#xC815; &#xD328;&#xD134;&#xC73C;&#xB85C; &#xB418;&#xB294; &#xACBD;&#xC6B0;&#xAC00; &#xB9CE;&#xC73C;&#xBA70;, &#xC8FC;&#xC5B4;&#xB098; &#xBAA9;&#xC801;&#xC5B4;&#xC640; &#xAC19;&#xC774; &#xBA85;&#xC0AC; &#xD615;&#xD0DC;&#xC758; &#xC77C;&#xBD80; &#xD488;&#xC0AC;&#xB4E4;&#xC774; &#xBE44;&#xC2B7;&#xD55C; &#xC758;&#xBBF8;&#xB098; &#xBC94;&#xC8FC;&#xB97C; &#xAC00;&#xC9C4; &#xB2E4;&#xC591;&#xD55C; &#xAC12;&#xC73C;&#xB85C; &#xD45C;&#xD604;&#xB420; &#xC218; &#xC788;&#xC9C0;&#xB9CC; &#xC758;&#xBBF8;&#xAC00; &#xBC14;&#xB00C;&#xC9C0; &#xC54A;&#xB294; &#xAC83;&#xC744; &#xC54C; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;. &#xC608;&#xB97C; &#xB4E4;&#xBA74;, <a href="#UtteranceExamples">&#xBC1C;&#xD654; &#xC608;&#xC2DC;</a>&#xC5D0;&#xC11C; &#xC5B8;&#xAE09;&#xD55C; &quot;&#xD68C;&#xC6D0; &#xAC00;&#xC785;&quot;, &quot;&#xBA64;&#xBC84; &#xB4F1;&#xB85D;&quot;, &quot;&#xACC4;&#xC815; &#xC0DD;&#xC131;&quot;&#xC774;&#xB77C;&#xB294; &#xD45C;&#xD604;&#xC740; &#xAC19;&#xC740; &#xC758;&#xBBF8;&#xB97C; &#xC9C0;&#xB2C8;&#xB294; &#xC694;&#xC18C;&#xB4E4;&#xB85C;&#xC11C; &#xAC19;&#xC740; &#xD328;&#xD134;&#xC758; &#xBB38;&#xC7A5;&#xC5D0;&#xC11C; &#xC5B4;&#xB5A4; &#xAC12;&#xC774; &#xB4E4;&#xC5B4;&#xC640;&#xB3C4; &#xBB38;&#xC7A5;&#xC758; &#xC758;&#xBBF8;&#xAC00; &#xBC14;&#xB00C;&#xC9C0; &#xC54A;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<p><img src="Resources/Images/Clova_Chatbot_Extension_Dictionary_for_Variable.png" alt=""></p>
+<p>Chatbot extension&#xC758; interaction &#xBAA8;&#xB378;&#xC5D0;&#xC11C;&#xB294; &#xC774;&#xB7F0; &#xBD80;&#xBD84;&#xC744; &#xBCC0;&#xC218;&#xB77C;&#xACE0; &#xC9C0;&#xCE6D;&#xD558;&#xACE0;, &#xBCC0;&#xC218; &#xC790;&#xB9AC;&#xC5D0; &#xB4E4;&#xC5B4;&#xC62C; &#xC218; &#xC788;&#xB294; &#xAC12;&#xC758; &#xBAA9;&#xB85D;&#xC744; &#xBCC0;&#xC218; &#xC0AC;&#xC804;&#xC774;&#xB77C;&#xACE0; &#xBD80;&#xB985;&#xB2C8;&#xB2E4;. &#xC55E;&#xC11C; &#xB098;&#xC5F4;&#xD55C; &#xBC1C;&#xD654; &#xC608;&#xC2DC;&#xB294; &#xBCC0;&#xC218;&#xB97C; &#xC774;&#xC6A9;&#xD574;&#xC11C; &#xD45C;&#xD604;&#xD558;&#xBA74; &#xB2E4;&#xC74C;&#xACFC; &#xAC19;&#xC740; &#xD328;&#xD134;&#xC73C;&#xB85C; &#xD45C;&#xD604;&#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<pre><code>{{&#xBCC0;&#xC218;}}&#xD558;&#xACE0; &#xC2F6;&#xC5B4;&#xC694;.
+{{&#xBCC0;&#xC218;}} &#xBC29;&#xBC95;&#xC744; &#xC54C;&#xB824;&#xC8FC;&#xC138;&#xC694;.
+{{&#xBCC0;&#xC218;}}&#xD558;&#xB824;&#xBA74; &#xC5B4;&#xB5BB;&#xAC8C;&#xD574;&#xC57C; &#xD558;&#xB098;&#xC694;?
+</code></pre><p>&#xC77C;&#xBC18;&#xC801;&#xC73C;&#xB85C; &#xBCC0;&#xC218; &#xC0AC;&#xC804;&#xC740; &#xC720;&#xC758;&#xC5B4;&#xB098; &#xB3D9;&#xC758;&#xC5B4;&#xC758; &#xC9D1;&#xD569;&#xC774; &#xB420; &#xC218;&#xB3C4; &#xC788;&#xC73C;&#xB098; &#xC0C1;&#xC704; &#xBD84;&#xB958;&#xB098; &#xAC1C;&#xB150;&#xC774; &#xAC19;&#xC740; &#xC6A9;&#xC5B4;&#xB098; &#xD2B9;&#xC815; &#xC18D;&#xC131;&#xC774; &#xAC19;&#xC740; &#xC6A9;&#xC5B4;&#xC758; &#xC9D1;&#xD569;&#xC77C; &#xC218;&#xB3C4; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;. &#xC608;&#xB97C; &#xB4E4;&#xBA74;, NAVER &#xCE74;&#xD398;, NAVER &#xBE14;&#xB85C;&#xADF8;, NAVER &#xBBA4;&#xC9C1;, NAVER &#xBA54;&#xC77C; &#xB4F1;&#xC758; &#xC11C;&#xBE44;&#xC2A4; &#xC6A9;&#xC5B4;&#xB294; &#xC720;&#xC758;&#xC5B4;&#xB098; &#xB3D9;&#xC758;&#xC5B4;&#xB77C;&#xACE0; &#xD560; &#xC218;&#xB294; &#xC5C6;&#xC73C;&#xB098; NAVER &#xACC4;&#xC815;&#xC73C;&#xB85C; &#xC11C;&#xBE44;&#xC2A4;&#xB41C;&#xB2E4;&#xB294; &#xACF5;&#xD1B5;&#xB41C; &#xC18D;&#xC131;&#xC774; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;. &#xB530;&#xB77C;&#xC11C; &#xAC01; &#xC11C;&#xBE44;&#xC2A4;&#xC758; &#xD68C;&#xC6D0; &#xAC00;&#xC785; &#xBB38;&#xC758;&#xB294; NAVER &#xACC4;&#xC815; &#xC0DD;&#xC131;&#xACFC; &#xAC19;&#xC740; &#xBB38;&#xC758;&#xC774;&#xBBC0;&#xB85C; &#xAC19;&#xC740; &#xC0AC;&#xC804;&#xC5D0; &#xC18D;&#xD55C; &#xBCC0;&#xC218;&#xB85C; &#xC0AC;&#xC6A9;&#xD560; &#xC218; &#xC788;&#xAC8C; &#xB429;&#xB2C8;&#xB2E4;.</p>
+<pre><code>NAVER &#xBA54;&#xC77C; &#xAC00;&#xC785; &#xBC29;&#xBC95; &#xC54C;&#xB824;&#xC8FC;&#xC138;&#xC694;.
+NAVER &#xCE74;&#xD398; &#xAC00;&#xC785; &#xBC29;&#xBC95; &#xC54C;&#xB824;&#xC8FC;&#xC138;&#xC694;.
+NAVER &#xBE14;&#xB85C;&#xADF8; &#xAC00;&#xC785; &#xBC29;&#xBC95; &#xC54C;&#xB824;&#xC8FC;&#xC138;&#xC694;.
+NAVER &#xBBA4;&#xC9C1; &#xAC00;&#xC785; &#xBC29;&#xBC95; &#xC54C;&#xB824;&#xC8FC;&#xC138;&#xC694;.
+...
+</code></pre><p>&#xB530;&#xB77C;&#xC11C; &#xC704; &#xBC1C;&#xD654; &#xC608;&#xC2DC;&#xB294; &quot;NAVER &#xC11C;&#xBE44;&#xC2A4;&quot;&#xB77C;&#xB294; &#xBCC0;&#xC218; &#xC0AC;&#xC804;&#xC744; &#xB9CC;&#xB4E4;&#xACE0; &#xC774; &#xC0AC;&#xC804;&#xC744; &#xCC38;&#xC870;&#xD558;&#xB294; &#xBCC0;&#xC218;&#xB85C; &#xBC18;&#xBCF5; &#xC5C6;&#xC774; &#xD55C; &#xBC88;&#xC5D0; &#xD45C;&#xD604;&#xB420; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<pre><code>{{NAVER &#xC11C;&#xBE44;&#xC2A4;}} &#xAC00;&#xC785; &#xBC29;&#xBC95; &#xC54C;&#xB824;&#xC8FC;&#xC138;&#xC694;.
+
+// &#xBCC0;&#xC218; &#xC0AC;&#xC804; &#xC120;&#xC5B8;
+NAVER &#xC11C;&#xBE44;&#xC2A4;=NAVER &#xBA54;&#xC77C;, NAVER &#xCE74;&#xD398;, NAVER &#xBE14;&#xB85C;&#xADF8;, NAVER &#xBBA4;&#xC9C1;
+...
+</code></pre><h3 id="ResponsesForEachUtteranceType">&#xBC1C;&#xD654; &#xC720;&#xD615;&#xBCC4; &#xB2F5;&#xBCC0; </h3>
+<p>&#xBC1C;&#xD654; &#xC720;&#xD615;&#xC744; &#xC815;&#xC758;&#xD588;&#xACE0; &#xBC1C;&#xD654; &#xC608;&#xC2DC;&#xAE4C;&#xC9C0; &#xC791;&#xC131;&#xD588;&#xB2E4;&#xBA74; &#xC0AC;&#xC6A9;&#xC790;&#xC5D0;&#xAC8C; &#xC5B4;&#xB5BB;&#xAC8C; &#xB2F5;&#xBCC0;&#xD560;&#xC9C0; &#xC791;&#xC131;&#xD574;&#xC57C; &#xD569;&#xB2C8;&#xB2E4;. &#xACE0;&#xAC1D; &#xC13C;&#xD130; &#xC9C0;&#xC6D0; &#xB3C4;&#xC6C0;&#xB9D0; &#xD615;&#xD0DC;&#xC758; &#xC11C;&#xBE44;&#xC2A4;&#xB77C;&#xBA74; &#xC0AC;&#xC6A9;&#xC790;&#xAC00; &#xBB38;&#xC758;&#xD55C; &#xB0B4;&#xC6A9;&#xC5D0; &#xB300;&#xD55C; &#xC815;&#xBCF4;&#xB098; &#xAC00;&#xC774;&#xB4DC;&#xB97C; &#xB9D0;&#xBC97; &#xC11C;&#xBE44;&#xC2A4; &#xD615;&#xD0DC;&#xB77C;&#xBA74; &#xB300;&#xD654;&#xC5D0; &#xB9DE;&#xB294; &#xB2F5;&#xBCC0;&#xC744; &#xD558;&#xBA74; &#xB429;&#xB2C8;&#xB2E4;. &#xB2F5;&#xBCC0;&#xC774; &#xBC1C;&#xC74C; &#xC624;&#xB958;&#xB098; &#xC784;&#xC758;&#xC758; &#xB04A;&#xC5B4; &#xC77D;&#xAE30; &#xC5C6;&#xC774; &#xC790;&#xC5F0;&#xC2A4;&#xB7FD;&#xAC8C; &#xBC1C;&#xC74C;&#xB418;&#xB824;&#xBA74; &#xB2E4;&#xC74C;&#xACFC; &#xAC19;&#xC740; &#xADDC;&#xCE59;&#xC744; &#xC9C0;&#xCF1C;&#xC57C; &#xD569;&#xB2C8;&#xB2E4;.</p>
+<ul>
+<li>&#xBB38;&#xBC95;&#xC5D0; &#xB9DE;&#xAC8C; &#xB2F5;&#xBCC0;&#xC744; &#xC791;&#xC131;&#xD569;&#xB2C8;&#xB2E4;.</li>
+<li>&#xBB38;&#xC7A5;&#xC744; &#xC791;&#xC131;&#xD560; &#xB54C; &#xC870;&#xC0AC;&#xB97C; &#xD3EC;&#xD568;&#xD558;&#xC5EC; &#xAC04;&#xACB0;&#xD558;&#xAC8C; &#xC791;&#xC131;&#xD569;&#xB2C8;&#xB2E4;. &#xC870;&#xC0AC;&#xB97C; &#xD3EC;&#xD568;&#xD558;&#xC9C0; &#xC54A;&#xC740; &#xBB38;&#xC790;&#xC740; &#xBD80;&#xC790;&#xC5F0;&#xC2A4;&#xB7FD;&#xAC8C; &#xC77D;&#xD790; &#xAC00;&#xB2A5;&#xC131;&#xC774; &#xB192;&#xC2B5;&#xB2C8;&#xB2E4;.</li>
+<li>&#xB744;&#xC5B4;&#xC4F0;&#xAE30;&#xB97C; &#xC9C0;&#xCF1C;&#xC8FC;&#xB294; &#xAC83;&#xC774; &#xC88B;&#xC2B5;&#xB2C8;&#xB2E4;. &#xB744;&#xC5B4;&#xC4F0;&#xAE30;&#xB97C; &#xC9C0;&#xD0A4;&#xC9C0; &#xC54A;&#xC73C;&#xBA74; &#xBC1C;&#xC74C; &#xC624;&#xB958;&#xAC00; &#xBC1C;&#xC0DD;&#xD560; &#xC218;&#xB3C4; &#xC788;&#xACE0; &#xC6D0;&#xD558;&#xC9C0; &#xC54A;&#xB294; &#xBD80;&#xBD84;&#xC5D0;&#xC11C; &#xB2F5;&#xBCC0;&#xC774; &#xBD80;&#xC790;&#xC5F0;&#xC2A4;&#xB7FD;&#xAC8C; &#xB04A;&#xC5B4;&#xC838; &#xC77D;&#xD790; &#xC218;&#xB3C4; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</li>
+<li>&#xBB38;&#xC7A5; &#xBD80;&#xD638;&#xB97C; &#xC801;&#xC808;&#xD788; &#xC4F0;&#xB294; &#xAC83;&#xC774; &#xC88B;&#xC2B5;&#xB2C8;&#xB2E4;.</li>
+<li>&#xC22B;&#xC790;, &#xC601;&#xC5B4;, &#xAE30;&#xD638; &#xD45C;&#xD604;&#xC740; &#xC74C;&#xCC28; &#xD45C;&#xD604;&#xC73C;&#xB85C; &#xC791;&#xC131;&#xD558;&#xB294; &#xAC83;&#xC774; &#xC88B;&#xC2B5;&#xB2C8;&#xB2E4;. &#xB2E4;&#xC74C;&#xC740; &#xC74C;&#xCC28; &#xD45C;&#xD604;&#xC744; &#xD55C; &#xC608;&#xC785;&#xB2C8;&#xB2E4;.<ul>
+<li>2080: &#xC774;&#xCC9C;&#xD314;&#xC2ED; &#xB610;&#xB294; &#xC774;&#xACF5;&#xD314;&#xACF5;</li>
+<li>3M: &#xC4F0;&#xB9AC;&#xC5E0;, &#xC0BC; &#xBBF8;&#xD130; &#xB610;&#xB294; &#xC0BC; &#xBA54;&#xAC00;</li>
+<li>1/3: &#xC77C;&#xC6D4; &#xC0BC;&#xC77C; &#xB610;&#xB294; &#xC0BC;&#xBD84;&#xC758; &#xC77C;</li>
+</ul>
+</li>
+<li>&#xC57D;&#xC5B4; &#xB610;&#xD55C; &#xD480;&#xC5B4;&#xC11C; &#xD55C;&#xAE00;&#xB85C; &#xC4F0;&#xB294; &#xAC83;&#xC774; &#xC88B;&#xC2B5;&#xB2C8;&#xB2E4;. &#xC608;&#xB97C; &#xB4E4;&#xBA74;, TG&#xC640; &#xAC19;&#xC740; &#xC57D;&#xC5B4;&#xB294; &#xD1A8;&#xAC8C;&#xC774;&#xD2B8;&#xB85C; &#xD480;&#xC5B4;&#xC4F0;&#xB294; &#xAC83;&#xC774; &#xC88B;&#xC2B5;&#xB2C8;&#xB2E4;.</li>
+<li>&#xC5EC;&#xB7EC; &#xB2E8;&#xACC4;&#xC5D0; &#xAC78;&#xCCD0;&#xC11C; &#xC548;&#xB0B4;&#xB97C; &#xD558;&#xB824;&#xBA74; &#xB2F5;&#xBCC0;&#xD558;&#xB294; &#xBB38;&#xC7A5; &#xC55E;&#xC5D0; &quot;&#xCCAB; &#xBC88;&#xC7AC;&quot;, &quot;&#xADF8; &#xB2E4;&#xC74C;&#xC5D0;&#xB294;&quot;, &quot;&#xB9C8;&#xC9C0;&#xB9C9;&#xC73C;&#xB85C;&quot; &#xB4F1;&#xACFC; &#xAC19;&#xC740; &#xD45C;&#xD604;&#xC744; &#xB123;&#xB294; &#xAC83;&#xC774; &#xC88B;&#xC2B5;&#xB2C8;&#xB2E4;.</li>
+</ul>
+<p>&#xC608;&#xB97C; &#xB4E4;&#xBA74;, &quot;&#xAC00;&#xC785; &#xBB38;&#xC758;&quot; &#xBC1C;&#xD654; &#xC720;&#xD615;&#xC5D0; &#xB300;&#xD574; &#xB2E4;&#xC74C;&#xACFC; &#xAC19;&#xC740; &#xB2F5;&#xBCC0;&#xC744; &#xC791;&#xC131;&#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<pre><code>&#xD68C;&#xC6D0;&#xAC00;&#xC785;&#xC740; NAVER &#xD648;&#xD398;&#xC774;&#xC9C0;&#xC5D0;&#xC11C; &#xD558;&#xC2E4; &#xC218; &#xC788;&#xC73C;&#xBA70;, &#xB85C;&#xADF8;&#xC778; &#xC601;&#xC5ED; &#xD558;&#xB2E8;&#xC758; &#xD68C;&#xC6D0;&#xAC00;&#xC785; &#xB9C1;&#xD06C;&#xB97C; &#xD1B5;&#xD574; &#xC9C4;&#xD589;&#xD558;&#xC2E4; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.
+</code></pre><p>&#xC77C;&#xBC18;&#xC801;&#xC73C;&#xB85C; &#xACE0;&#xAC1D; &#xC13C;&#xD130; &#xC9C0;&#xC6D0; &#xB3C4;&#xC6C0;&#xB9D0; &#xD615;&#xD0DC;&#xC758; &#xC11C;&#xBE44;&#xC2A4;&#xB294; &#xD558;&#xB098;&#xC758; &#xBC1C;&#xD654; &#xC720;&#xD615;&#xC5D0; &#xD558;&#xB098;&#xC758; &#xB2F5;&#xBCC0;&#xC774; &#xC791;&#xC131;&#xB418;&#xB098; &#xB9D0;&#xBC97; &#xC11C;&#xBE44;&#xC2A4;&#xC758; &#xACBD;&#xC6B0;&#xC5D0;&#xB294; &#xD558;&#xB098;&#xC758; &#xBC1C;&#xD654; &#xC720;&#xD615;&#xC5D0; &#xB2E4;&#xC591;&#xD55C; &#xB2F5;&#xBCC0;&#xC744; &#xC900;&#xBE44;&#xD574;&#xB193;&#xC744; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;. &#xBB3C;&#xB860;, &#xD558;&#xB098;&#xC758; &#xBC1C;&#xD654; &#xC720;&#xD615;&#xC5D0; &#xB2F5;&#xBCC0;&#xC740; &#xC5EC;&#xB7EC; &#xAC1C;&#xB97C; &#xB4F1;&#xB85D;&#xD560; &#xC218; &#xC788;&#xC9C0;&#xB9CC; &#xC2E4;&#xC81C; &#xB300;&#xD654; &#xC2DC; &#xD558;&#xB098;&#xC758; &#xB2F5;&#xBCC0;&#xB9CC; &#xC0AC;&#xC6A9;&#xC790;&#xC5D0;&#xAC8C; &#xC804;&#xB2EC;&#xB429;&#xB2C8;&#xB2E4;. &#xC608;&#xB97C; &#xB4E4;&#xC5B4; &#xB9D0;&#xBC97; &#xC11C;&#xBE44;&#xC2A4;&#xC5D0;&#xC11C; &#xC0AC;&#xC6A9;&#xC790;&#xC758; &#xBC1C;&#xD654; &#xC911; &quot;&#xCC57;&#xBD07; &#xB098;&#xC774; &#xC694;&#xCCAD;&quot; &#xBC1C;&#xD654; &#xC720;&#xD615;&#xC5D0; &#xB300;&#xD55C; &#xB2F5;&#xBCC0;&#xC73C;&#xB85C; &#xB2E4;&#xC74C;&#xACFC; &#xAC19;&#xC740; &#xB2F5;&#xBCC0;&#xC744; &#xC900;&#xBE44;&#xD574;&#xB458; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<pre><code>&#xB098;&#xC774;&#xAC00; &#xC911;&#xC694;&#xD55C;&#xAC00;&#xC694;?
+&#xB9DE;&#xCDB0;&#xBCF4;&#xC138;&#xC694;.
+&#xBE44;&#xBC00;&#xC774;&#xC5D0;&#xC694;.
+</code></pre><p>&#xB4F1;&#xB85D;&#xB41C; &#xBCF5;&#xC218;&#xC758; &#xB2F5;&#xBCC0; &#xC911;&#xC5D0; &#xC5B4;&#xB5A4; &#xB2F5;&#xBCC0;&#xC744; &#xC751;&#xB2F5;&#xC73C;&#xB85C; &#xC904;&#xC9C0;&#xB294; &#xB2E4;&#xC74C;&#xACFC; &#xAC19;&#xC774; &#xB450; &#xAC00;&#xC9C0; &#xBC29;&#xBC95;&#xC73C;&#xB85C; &#xACB0;&#xC815;&#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<ul>
+<li>&#xC5EC;&#xB7EC; &#xB2F5;&#xBCC0; &#xC911; &#xD2B9;&#xC815; &#xB2F5;&#xBCC0;&#xC744; &#xC804;&#xB2EC;&#xD558;&#xB3C4;&#xB85D; &#xC9C0;&#xC815;&#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</li>
+<li>&#xC5EC;&#xB7EC; &#xB2F5;&#xBCC0; &#xC911; &#xBD88;&#xADDC;&#xCE59;&#xD55C; &#xBC29;&#xC2DD;&#xC73C;&#xB85C; &#xC784;&#xC758;&#xC758; &#xB2F5;&#xBCC0;&#xC744; &#xC0AC;&#xC6A9;&#xC790;&#xC5D0;&#xAC8C; &#xC804;&#xB2EC;&#xD558;&#xB3C4;&#xB85D; &#xC9C0;&#xC815;&#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</li>
+</ul>
+<p>&#xBC1C;&#xD654; &#xC720;&#xD615;&#xBCC4; &#xB2F5;&#xBCC0;&#xAE4C;&#xC9C0; &#xC791;&#xC131;&#xD558;&#xACE0; &#xB098;&#xBA74; interaction &#xBAA8;&#xB378;&#xC744; &#xB2E4;&#xC74C;&#xACFC; &#xAC19;&#xC774; &#xD45C; &#xD615;&#xD0DC;&#xB85C; &#xB098;&#xD0C0;&#xB0B4;&#xC11C; &#xC815;&#xB9AC;&#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<table>
+  <thead>
+    <tr>
+      <th width="15%">&#xC11C;&#xBE44;&#xC2A4; &#xD615;&#xD0DC;</th><th width="15%">&#xBC1C;&#xD654; &#xC720;&#xD615; &#xBD84;&#xB958;</th><th width="35%">&#xBC1C;&#xD654; &#xC608;&#xC2DC;</th><th width="35%">&#xB2F5;&#xBCC0;</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>&#xACE0;&#xAC1D; &#xC13C;&#xD130; &#xC9C0;&#xC6D0; &#xB3C4;&#xC6C0;&#xB9D0;</td>
+      <td>&#xAC00;&#xC785; &#xBB38;&#xC758;</td>
+      <td>
+        <ul>
+          <li>&#xD68C;&#xC6D0; &#xAC00;&#xC785;&#xD558;&#xACE0; &#xC2F6;&#xC5B4;&#xC694;.</li>
+          <li>&#xBA64;&#xBC84; &#xB4F1;&#xB85D; &#xBC29;&#xBC95;&#xC744; &#xC54C;&#xB824;&#xC8FC;&#xC138;&#xC694;.</li>
+          <li>&#xACC4;&#xC815; &#xC0DD;&#xC131;&#xD558;&#xB824;&#xBA74; &#xC5B4;&#xB5BB;&#xAC8C; &#xD574;&#xC57C; &#xD558;&#xB098;&#xC694;?</li>
+        </ul>
+      </td>
+      <td>
+        <ul>
+          <li>&#xD68C;&#xC6D0;&#xAC00;&#xC785;&#xC740; NAVER &#xD648;&#xD398;&#xC774;&#xC9C0;&#xC5D0;&#xC11C; &#xD558;&#xC2E4; &#xC218; &#xC788;&#xC73C;&#xBA70;, &#xB85C;&#xADF8;&#xC778; &#xC601;&#xC5ED; &#xD558;&#xB2E8;&#xC758; &#xD68C;&#xC6D0;&#xAC00;&#xC785; &#xB9C1;&#xD06C;&#xB97C; &#xD1B5;&#xD574; &#xC9C4;&#xD589;&#xD558;&#xC2E4; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>&#xB9D0;&#xBC97; &#xC11C;&#xBE44;&#xC2A4;</td>
+      <td>&#xCC57;&#xBD07; &#xB098;&#xC774; &#xC694;&#xCCAD;</td>
+      <td>
+        <ul>
+          <li>&#xBA87; &#xC0B4;&#xC774;&#xC57C;?</li>
+          <li>&#xB098;&#xC774;&#xAC00; &#xC5B4;&#xB5BB;&#xAC8C; &#xB3FC;?</li>
+        </ul>
+      </td>
+      <td>
+        <ul>
+          <li>&#xB098;&#xC774;&#xAC00; &#xC911;&#xC694;&#xD55C;&#xAC00;&#xC694;?</li>
+          <li>&#xB9DE;&#xCDB0;&#xBCF4;&#xC138;&#xC694;.</li>
+          <li>&#xBE44;&#xBC00;&#xC774;&#xC5D0;&#xC694;.</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="Precautions">&#xC720;&#xC758;&#xC0AC;&#xD56D; </h2>
+<p>Extension&#xC744; &#xC124;&#xACC4;&#xD560; &#xB54C; &#xB2E4;&#xC74C;&#xACFC; &#xAC19;&#xC740; &#xC0AC;&#xD68C;&#xC801;&#xC778; &#xB610;&#xB294; &#xBC95;&#xC801;&#xC778; &#xBB38;&#xC81C;&#xAC00; &#xC5C6;&#xB294;&#xC9C0; &#xBBF8;&#xB9AC; &#xD30C;&#xC545;&#xD558;&#xC5EC; &#xBB38;&#xC81C;&#xAC00; &#xBC1C;&#xC0DD;&#xD558;&#xC9C0; &#xC54A;&#xB3C4;&#xB85D; &#xBC18;&#xB4DC;&#xC2DC; &#xC8FC;&#xC758;&#xD574;&#xC57C; &#xD569;&#xB2C8;&#xB2E4;. Extension&#xC744; &#xC124;&#xACC4;&#xD558;&#xB294; &#xB2E8;&#xACC4;&#xBFD0;&#xB9CC; &#xC544;&#xB2C8;&#xB77C; extension&#xC744; Clova&#xC5D0; &#xB4F1;&#xB85D;&#xD558;&#xAC70;&#xB098; &#xBC30;&#xD3EC;&#xD560; &#xB54C;&#xC5D0;&#xB3C4; &#xC544;&#xB798; &#xC0AC;&#xD56D;&#xC744; &#xD55C; &#xBC88; &#xB354; &#xAC80;&#xD1A0;&#xD560; &#xAC83;&#xC744; &#xAD8C;&#xACE0;&#xD569;&#xB2C8;&#xB2E4;.</p>
+<ul>
+<li>&#xC800;&#xC791;&#xAD8C; &#xBCF4;&#xD638; &#xC758;&#xBB34;&#xC5D0; &#xB300;&#xD55C; &#xC704;&#xBC18; &#xC0AC;&#xD56D;&#xC774; &#xC5C6;&#xB294;&#xC9C0; &#xAC80;&#xD1A0;</li>
+<li>&#xAC1C;&#xC778; &#xC815;&#xBCF4; &#xBCF4;&#xD638; &#xC758;&#xBB34;&#xC5D0; &#xB300;&#xD55C; &#xC704;&#xBC18; &#xC0AC;&#xD56D;&#xC774; &#xC5C6;&#xB294;&#xC9C0; &#xAC80;&#xD1A0;</li>
+<li>&#xC11C;&#xBE44;&#xC2A4; &#xC5F0;&#xACB0;&#xC774;&#xB098; &#xB370;&#xC774;&#xD130; &#xC81C;&#xACF5;&#xC774; &#xC77C;&#xD68C;&#xC801;&#xC774;&#xC9C0; &#xC54A;&#xACE0; &#xC9C0;&#xC18D;&#xC801;&#xC77C; &#xC218; &#xC788;&#xB294;&#xC9C0; &#xAC80;&#xD1A0;</li>
+<li>&#xC544;&#xB3D9; &#xB610;&#xB294; &#xC77C;&#xBC18; &#xC0AC;&#xC6A9;&#xC790;&#xC5D0;&#xAC8C; &#xD574;&#xB97C; &#xC904; &#xC218; &#xC788;&#xB294; &#xC120;&#xC815;&#xC801;&#xC778; &#xCF58;&#xD150;&#xCE20;&#xAC00; &#xC5C6;&#xB294;&#xC9C0; &#xAC80;&#xD1A0;</li>
+</ul>
+<h2 id="ContinuousUpdate">&#xC9C0;&#xC18D;&#xC801;&#xC778; &#xC5C5;&#xB370;&#xC774;&#xD2B8; </h2>
+<p>Chatbot extension&#xC744; &#xAC1C;&#xBC1C;&#xD560; &#xB54C; &#xC0AC;&#xC6A9;&#xC790;&#xAC00; &#xC785;&#xB825;&#xD55C; &#xBC1C;&#xD654; &#xC720;&#xD615;&#xC758; &#xBC1C;&#xD654; &#xC608;&#xC2DC;&#xC5D0; &#xB9DE;&#xAC8C; &#xBC1C;&#xD654;&#xB97C; &#xD558;&#xC9C0; &#xC54A;&#xC744; &#xC218;&#xB3C4; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;. &#xC0AC;&#xC6A9;&#xC790;&#xB4E4;&#xC774; &#xC2E4;&#xC81C; &#xC774;&#xC6A9;&#xD558;&#xB294; &#xBC29;&#xC2DD;&#xAC00; &#xCC28;&#xC774;&#xAC00; &#xC788;&#xC744; &#xC218; &#xC788;&#xACE0; &#xC0AC;&#xC6A9;&#xC790;&#xC758; &#xBAA8;&#xB4E0; &#xC0AC;&#xC6A9; &#xD328;&#xD134;&#xC744; &#xB300;&#xBCC0;&#xD588;&#xB2E4;&#xACE0; &#xD560; &#xC218; &#xC5C6;&#xC2B5;&#xB2C8;&#xB2E4;. &#xC989;, &#xC0AC;&#xC6A9;&#xC790;&#xB294; &#xC608;&#xC0C1;&#xACFC; &#xB2E4;&#xB974;&#xAC8C; chatbot extension&#xC744; &#xC0AC;&#xC6A9;&#xD558;&#xB824;&#xACE0; &#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;. &#xB530;&#xB77C;&#xC11C;, chatbot extension&#xC744; &#xBC30;&#xD3EC;&#xD55C; &#xC774;&#xD6C4;&#xC5D0;&#xB3C4; chatbot extension&#xC758; &#xBC1C;&#xD654; &#xC720;&#xD615;&#xC774;&#xB098; &#xBC1C;&#xD654; &#xC608;&#xC2DC;&#xB97C; &#xC9C0;&#xC18D;&#xC801;&#xC73C;&#xB85C; &#xAC1C;&#xC120;&#xD558;&#xB294; &#xD65C;&#xB3D9;&#xC744; &#xD574;&#xC57C; &#xC0AC;&#xC6A9;&#xC790;&#xC758; &#xB9CC;&#xC871;&#xB3C4;&#xB97C; &#xD5A5;&#xC0C1;&#xC2DC;&#xD0AC; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<p>Chatbot extension &#xB4F1;&#xB85D;&#xD55C; &#xD6C4; Clova &#xD50C;&#xB7AB;&#xD3FC;&#xC774; &#xC81C;&#xACF5;&#xD558;&#xB294; &#xD1B5;&#xACC4; &#xB370;&#xC774;&#xD130;&#xB098; &#xC720;&#xC785;&#xB41C; &#xC0AC;&#xC6A9;&#xC790; &#xBC1C;&#xD654; &#xAE30;&#xB85D;(&#xCD94;&#xD6C4; &#xC81C;&#xACF5; &#xC608;&#xC815;) &#xBD84;&#xC11D;&#xD558;&#xC5EC; &#xAFB8;&#xC900;&#xD788; chatbot extension&#xC744; &#xC5C5;&#xB370;&#xC774;&#xD2B8;&#xD574;&#xC57C; &#xD569;&#xB2C8;&#xB2E4;.</p>
+
+                                
+                                </section>
+                            
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../Overview.html#OperationStructure" class="navigation navigation-prev " aria-label="Previous page: 동작 구조">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="Design_Guideline_For_Chatbot_Extension.html#DefineInteractionModel" class="navigation navigation-next " aria-label="Next page: Interaction 모델 정의">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Chatbot 디자인 가이드라인","level":"2.2","depth":1,"next":{"title":"Interaction 모델 정의","level":"2.2.1","depth":2,"anchor":"#DefineInteractionModel","path":"Design/Design_Guideline_For_Chatbot_Extension.md","ref":"Design/Design_Guideline_For_Chatbot_Extension.md#DefineInteractionModel","articles":[{"title":"사용자 발화 유형","level":"2.2.1.1","depth":3,"anchor":"#TypeOfUserUtterance","path":"Design/Design_Guideline_For_Chatbot_Extension.md","ref":"Design/Design_Guideline_For_Chatbot_Extension.md#TypeOfUserUtterance","articles":[]},{"title":"발화 예시","level":"2.2.1.2","depth":3,"anchor":"#UtteranceExamples","path":"Design/Design_Guideline_For_Chatbot_Extension.md","ref":"Design/Design_Guideline_For_Chatbot_Extension.md#UtteranceExamples","articles":[]},{"title":"변수 사전","level":"2.2.1.3","depth":3,"anchor":"#VariableDictionary","path":"Design/Design_Guideline_For_Chatbot_Extension.md","ref":"Design/Design_Guideline_For_Chatbot_Extension.md#VariableDictionary","articles":[]},{"title":"발화 유형별 답변","level":"2.2.1.4","depth":3,"anchor":"#ResponsesForEachUtteranceType","path":"Design/Design_Guideline_For_Chatbot_Extension.md","ref":"Design/Design_Guideline_For_Chatbot_Extension.md#ResponsesForEachUtteranceType","articles":[]}]},"previous":{"title":"동작 구조","level":"2.1.2","depth":2,"anchor":"#OperationStructure","path":"Overview.md","ref":"Overview.md#OperationStructure","articles":[]},"dir":"ltr"},"config":{"plugins":["-search","toggle-children","page-toc-button"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"page-toc-button":{"maxTocDepth":4,"minTocSize":2},"toggle-children":{},"highlight":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"NAVER Corporation","pdf":{"pageNumbers":true,"fontSize":11,"fontFamily":"Arial","paperSize":"a3","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":30,"left":30,"top":40,"bottom":40}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"ClassifiedInfo":"대외비","DocVersion":"v0.1","TargetCountryCode":"KR","DocOwner":"NAVER","OrientedService":"NAVER","TargetServiceForClientAuth":"NAVER","ReleaseYear":"2018","DevConsole":{"cek_edit":"수정","StoreHome":"Extension 스토어 홈","cek_account_linking":"계정 연결 여부","cek_builder_intent_slot_title":"Slot 목록","cek_keywords":"검색 키워드","cek_configuration":"서버 연동 설정","cek_child_directed":"미성년자 사용 가능 여부","cek_name":"이름","cek_access_token_uri":"Access token URI","cek_audioplayer":"오디오 플레이어 사용","ko_KR":"한국어","cek_domain_list":"도메인 리스트","cek_lang":"사용 언어","cek_invocation_name":"호출 이름","cek_builder_test_expression_title":"사용자 발화 예시 입력","cek_builder_select_slottype_builtin":"Built-in slot 타입","cek_service_endpoint_url":"Extension 서버 URL","cek_email":"서비스 담당자 정보","cek_interaction_model":"Interaction 모델","cek_builder_list_title_slottype":"등록된 slot 타입","cek_builder_test_test_again":"테스트 재요청","cek_builder_new_intent_create":"만들기","cek_provider":"제작사","cek_small_icon":"작은 아이콘","cek_cancel_review":"심사취소","cek_status":"상태","cek_builder_menu_build":"빌드","cek_test":"테스트","cek_builder_test_result_title":"테스트 결과","cek_publishing":"배포 정보","cek_builder_list_title_intent":"등록된 intent","cek_builder_new_slottype_title":"새로운 slot 타입 만들기","cek_status_processing":"배포 준비 중","cek_authorization_grant_type_implicit":"무조건 승인","cek_builder_test_slot_result":"분석된 slot","cek_status_prd":"서비스 중","cek_builder_test_request_json":"서비스 요청 JSON","cek_builder_test_no_response":"Response가 없습니다","cek_builder_slot_layer_select_slot":"등록된 slot 선택하기","cek_refresh_token_uri":"Access token 재발급 URI","cek_terms_of_use":"면책 조항 제공 URL","cek_builder_test_intent_result":"분석된 intent","cek_allow_purchase":"구매/지불 기능 존재 여부","cek_client_authentication_scheme":"클라이언트 인증 정보 전송 방식","cek_client_secret":"클라이언트 secret","ja_JP":"일본어","cek_builder_new_slottype_builtin_title":"Clova가 제공하는 built-in slot 타입 사용하기","ExtensionPage":"Extension 페이지","cek_ssl_certificate":"SSL 인증","cek_privacy_policy_url":"개인 정보 정책 제공 URL","cek_example_phrases":"대표 발화 예시","cek_version_test":"테스트","cek_configuration_url":"계정 설정 페이지 URL","cek_builder_menu_build_in_progress":"빌드중","cek_type":"타입","cek_id":"Extension ID","cek_yes":"네","cek_redirect_urls":"Redirect URL","cek_message":"메시지","cek_privacy":"개인 정보 보호 및 규정 준수","cek_create":"만들기","cek_skill_info":"Extension 정보","cek_large_icon":"큰 아이콘","cek_builder_test_response_json":"서비스 응답 JSON","cek_authorization_url":"로그인 URL","cek_status_reviewing":"심사 중","cek_save":"저장","cek_category":"분류","en_US":"영어","cek_builder_new_extension_create":"새로운 extension 만들기","cek_builder_new_intent":"새로운 custom intent 만들기","cek_tester":"테스터 ID","cek_status_rejected":"확인요망","cek_builder_test_request_test":"테스트 요청","cek_builder_header_title_dashboard":"사용자 발화 유형","cek_builder_header_title_slottype":"Slot 타입 추가하기","cek_no":"아니요","cek_short_skill_desc":"Extension 요약 설명","cek_version_service":"상용","cek_builder_test_slot_data":"분석된 slot 데이터","cek_builder_test_user_expression":"사용자 발화문","cek_client_id":"클라이언트 ID","cek_builder_utterance_select_slot":"Slot 타입을 선택해주세요","cek_authorization_grant_type":"허가 승인 타입","cek_full_skill_desc":"Extension 설명","ManageExtensions":"확장 서비스 관리","cek_builder_intent_expression_title":"발화 예시 목록","cek_view":"확인","cek_builder_header_title_intent":"Intent 추가하기","cek_authorization_grant_type_authcode":"허가 코드 승인","cek_builder_intent_slot_placeholder":"새로운 slot을 추가해보세요","cek_test_instructions":"Extension 심사용 설명","cek_builder_slottype_dictionary_title":"Slot 타입 사전","cek_request_submit":"심사신청","cek_scope":"권한 범위","cek_builder_test_service_response":"서비스 응답","cek_status_dev":"개발 중","cek_use_personal_info":"개인 정보 수집 여부","cek_builder_test_copy_json":"JSON 결과 복사"}},"title":"Clova Chatbot extension 가이드","language":"ko","gitbook":"*","description":"이 문서는 Clova가 제공하는 Chatbot extension과 이를 통해 간단한 대화나 문의 답변을 수행하는 서비스를 Clova로 제공하는 방법을 설명합니다.","direction":"ltr"},"file":{"path":"Design/Design_Guideline_For_Chatbot_Extension.md","mtime":"2018-03-18T03:39:04.427Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-03-20T06:34:49.234Z"},"basePath":"..","book":{"language":"ko"}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-toggle-children/toggle.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-page-toc-button/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
