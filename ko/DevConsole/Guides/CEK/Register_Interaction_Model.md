@@ -13,8 +13,9 @@ Clova developer console에서 [extension을 등록](/DevConsole/Guides/CEK/Regis
 Extension을 설계하는 과정에서 [정의한 Interaction 모델](/Design/Design_Guideline_For_Chatbot_Extension.md#DefineInteractionModel)은 다음 항목을 수행하여 등록하면 됩니다.
 
 * [사용자 발화 유형 추가하기](#AddUserRequestType)
-* [부가적인 답변 및 정보 제공하기](#ProvideAdditionalResponsesAndInfo)
+* [답변 및 URL 정보 추가하기](#AddResponsesAndURLInfo)
 * [사전 추가하기](#AddDictionary)
+* [응답 설정하기](#ConfigureResponseSettings)
 
 ## 사용자 발화 유형 추가하기 {#AddUserRequestType}
 
@@ -36,9 +37,9 @@ Extension을 설계하는 과정에서 [정의한 Interaction 모델](/Design/De
 
 ![](/DevConsole/Resources/Images/DevConsole-Added_User_Request.png)
 
-이 상태에서 [부가적인 답변 및 정보를 제공](#ProvideAdditionalResponsesAndInfo)하거나 [사전을 추가](#AddDictionary)할 수 있습니다. 그리고 위와 같은 동작을 반복하여 사용자 발화 유형을 계속 추가할 수 있습니다.
+이 상태에서 [답변 및 URL 정보를 추가](#AddResponsesAndURLInfo)하거나 [사전을 추가](#AddDictionary)할 수 있습니다. 그리고 위와 같은 동작을 반복하여 사용자 발화 유형을 계속 추가할 수 있습니다.
 
-## 부가적인 답변 및 정보 제공하기 {#ProvideAdditionalResponsesAndInfo}
+## 답변 및 URL 정보 추가하기 {#AddResponsesAndURLInfo}
 
 Chatbot extension은 특정 사용자 발화 유형에 대해 다음과 같이 답변을 제공할 수 있습니다.
 
@@ -64,10 +65,14 @@ Chatbot extension은 특정 사용자 발화 유형에 대해 다음과 같이 �
   </li>
 </ol>
 
-또한, 답변을 제공할 때 음성 정보로 전달될 텍스트 뿐만 아니라 답변과 관련된 URL 정보를 전달할 수 있다. URL 정보는 다음과 같이 **URL 주소**와 **노출 메시지**에 입력하면 됩니다. **URL 주소**는 이동하려는 URL이며 **노출 메시지**는 URL 대신 보여줄 텍스트를 의미합니다.
+또한, 답변을 제공할 때 음성 정보로 전달될 텍스트 뿐만 아니라 답변과 관련된 URL 정보를 전달할 수 있습니다. URL 정보는 다음과 같이 **URL 주소**와 **노출 메시지**에 입력하면 됩니다. **URL 주소**는 이동하려는 URL이며 **노출 메시지**는 URL 대신 보여줄 텍스트를 의미합니다.
 
 ![](/DevConsole/Resources/Images/DevConsole-Add_URL_In_The_Response.png)
 
+<div class="danger">
+  <p><strong>Caution!</strong></p>
+  <p>답변에 URL 정보를 추가로 제공하는 것은 현재 개발 중이며, 현재는 사용하실 수 없습니다.</p>
+</div>
 
 ## 사전 추가하기 {#AddDictionary}
 
@@ -97,4 +102,36 @@ Chatbot extension은 특정 사용자 발화 유형에 대해 다음과 같이 �
 
 사전이 적용되면 다음과 같이 같은 표현이나 패턴이 사용된 발화 예시는 다른 표현으로 바꾸는 것이 좋습니다.
 
-![](/DevConsole/Resources/Images/DevConsole-Add_Dictionary_6.png)
+![](/DevConsole/Resources/Images/DevConsole-Utterance_Example_After_Applying_Dictionary.png)
+
+## 응답 설정하기 {#ConfigureResponseSettings}
+
+Interaction 모델에는 사용자 발화 유형과 그에 대한 답변 그리고 사전을 등록할 수 있을 뿐만 아니라 응답에 대해 다음과 같은 것들을 설정할 수 있습니다.
+
+* 첫 인사 메시지
+* 사용자 발화 인식을 확신하는 정도에 따른 답변 구간
+* 시스템 또는 서비스 장애에 따른 오류 메시지
+
+왼쪽 사이드 메뉴바의 <strong>설정</strong> 메뉴를 누르면 <strong>{{ book.DevConsole.cek_interaction_model }}:설정</strong> 화면이 표시됩니다.
+
+![](/DevConsole/Resources/Images/DevConsole-Response_Settings.png)
+
+**첫인사 메시지**는 사용자가 chatbot extension 사용을 시작했을 때 전달할 간단한 인사나 사용법에 대한 안내 문구입니다. 다음과 같이 적당한 인사 메시지를 입력합니다.
+
+![](/DevConsole/Resources/Images/DevConsole-Add_Greeting_Message.png)
+
+**답변값 설정** 필드는 사용자의 발화 인식을 확신하는 정도에 따라 답변 구간을 나누고 그에 따른 답변 메시지를 설정하는 영역입니다. 답변 구간은 다음과 같이 구분됩니다.
+
+* 정상 답변 구간(<span style="color:#ffffff; font-size:150%; vertical-align:middle;">&#9724;</span>): 사용자 발화가 미리 정의해 둔 사용자 발화 유형 중 하나로 식별되어 정상 답변이 가능하다고 판단한 구간
+* 재질문 구간(<span style="color:#f1b5b5; font-size:150%; vertical-align:middle;">&#9724;</span>): 사용자 발화가 정상 답변 구간에 속하는지 미제공 질문 구간에 속하는지 판단하기 어려운 구간
+* 미제공 질문 구간(<span style="color:#cee097; font-size:150%; vertical-align:middle;">&#9724;</span>): 사용자가 발화가 미리 정의해 둔 사용자 발화 유형 중 어느 것으로도 식별될 수 없어 답변이 불가능하다고 판단한 구간
+
+사용자는 다양한 표현으로 이야기할 수 있기 때문에 Clova는 사용자의 발화 인식을 확률적으로 판단하여 전달합니다. 사용자 발화의 인식이 재질문 구간이나 미제공 질문 구간에 속하는 것으로 판단된다면 상황에 맞는 메시지를 전달할 수 있습니다. 다음은 각 구간에 대한 범위를 설정하고 재질문 구간과 미제공 질문 구간에 대해 응답 메시지를 작성한 예입니다.
+
+![](/DevConsole/Resources/Images/DevConsole-Configure_Response_Brackets.png)
+
+**에러 메시지** 필드는 시스템 또는 서비스 장애 시 제공할 오류 메시지를 입력하는 필드입니다.
+
+![](/DevConsole/Resources/Images/DevConsole-Add_Error_Message.png)
+
+마지막으로 설정 내용을 적용하려면 **저장** 버튼을 눌러야 합니다.

@@ -9,7 +9,6 @@ Extension이 심사를 통과하여 extension 배포가 승인되면 extension�
 
 **{{ book.DevConsole.cek_version_service }}** 버전의 extension 정보는 현재 서비스 중인 내용 반영하고 있으며 더 이상 수정할 수 없습니다. 따라서 복사된 **{{ book.DevConsole.cek_version_test }}** 버전을 이용하여 extension을 업데이트해야 합니다. Extension에 다음과 같은 업데이트 사항이 생기면 이를 **{{ book.DevConsole.cek_version_test }}** 버전 extension 반영한 후 심사를 다시 신청하면 됩니다.
 * [기본 정보](/DevConsole/Guides/CEK/Register_Chatbot_Extension.md#InputExtensionInfo)
-* [서버 연동 정보](/DevConsole/Guides/CEK/Register_Chatbot_Extension.md#SetServerConnection)
 * [interaction 모델](/DevConsole/Guides/CEK/Register_Interaction_Model.md)
 * [배포 정보](/DevConsole/Guides/CEK/Deploy_Chatbot_Extension.md)
 
