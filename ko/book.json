@@ -5,8 +5,8 @@
   "direction": "ltr",
   "author": "NAVER Corporation",
   "variables": {
-    "ClassifiedInfo": "대외비",
-    "DocVersion": "v0.2",
+    "ClassifiedInfo": "Confidential",
+    "DocVersion": "v0.3",
     "TargetCountryCode": "KR",
     "DocOwner": "NAVER",
     "OrientedService": "NAVER",
