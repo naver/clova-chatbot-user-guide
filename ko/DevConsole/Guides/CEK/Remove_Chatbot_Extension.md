@@ -13,7 +13,7 @@ Extension이 심사 중인 경우는 심사를 취소하고 언제든지 extensi
 
 ![](/DevConsole/Resources/Images/DevConsole-Cancel_Submission.png)
 
-만약, extension이 심사를 통과하여 서비스 중인 상태라면 서비스를 중지한 후에 extension을 삭제할 수 있습니다. 서비스를 중지하면 extension의 상태가 **{{ book.DevConsole.cek_status_dev }}**인 상태로 변경됩니다.
+만약, extension이 심사를 통과하여 서비스 중인 상태라면 서비스를 중지한 후에 extension을 삭제할 수 있습니다. 서비스를 중지하면 extension의 상태가 **{{ book.DevConsole.cek_status_dev }}**로 변경됩니다.
 
 <div class="note">
   <p><strong>Note!</strong></p>

@@ -1,9 +1,9 @@
 # 문서 정보
-이 문서는 Clova가 제공하는 Chatbot extension과 이를 통해 간단한 대화나 문의 답변을 수행하는 서비스를 Clova로 제공하는 방법을 설명합니다. 대상 독자는 Clova Chatbot extension을 이용하여 사용자와 간단한 대화를 수행하는 서비스를 만들거나 고객 지원을 위해 문의에 대한 답변 서비스를 제공하려는 서비스 담당자입니다.
+이 문서는 Clova가 제공하는 chatbot extension과 이를 통해 간단한 대화나 문의 답변을 수행하는 서비스를 Clova로 제공하는 방법을 설명합니다. 대상 독자는 chatbot extension을 이용하여 사용자와 간단한 대화를 수행하는 서비스를 만들거나 고객 지원을 위해 문의에 대한 답변 서비스를 제공하려는 서비스 담당자입니다.
 
 <div class="note">
   <p><strong>Note!</strong></p>
-  <p>Clova Chatbot extension은 개발이 계속 진행되고 있습니다. 따라서, 문서의 내용은 언제든지 변경될 수 있습니다.</p>
+  <p>Chatbot extension은 개발이 계속 진행되고 있습니다. 따라서, 문서의 내용은 언제든지 변경될 수 있습니다.</p>
 </div>
 
 ## 연락처

@@ -1,5 +1,5 @@
 # Chatbot extension 배포하기
-[Chatbot extension](/CEK/Guides/Build_Chatbot_Extension.md)을 [Clova developer console에 등록](/DevConsole/Guides/CEK/Register_Chatbot_Extension.md)했다면 등록한 extension을 Clova 서비스에 배포할 수 있습니다. 배포하면 일반 사용자들이 **{{ book.DevConsole.ManageExtensions }}**라는 메뉴(Extension 스토어)에서 배포된 extension을 사용할 수 있게 됩니다.
+[Chatbot extension](/CEK/Guides/Build_Chatbot_Extension.md)을 [Clova developer console에 등록](/DevConsole/Guides/CEK/Register_Chatbot_Extension.md)했다면 등록한 extension을 Clova 서비스에 배포할 수 있습니다. 배포하면 일반 사용자들이 **{{ book.DevConsole.ManageExtensions }}**라는 메뉴(extension 스토어)에서 배포된 extension을 사용할 수 있게 됩니다.
 
 Extension을 배포할 때 일반적으로 다음 항목을 수행해야 합니다.
 
@@ -9,7 +9,7 @@ Extension을 배포할 때 일반적으로 다음 항목을 수행해야 합니�
 
 ## 배포 정보 입력 {#InputDeploymentInfo}
 
-Clova developer console에서 [extension을 등록](/DevConsole/Guides/CEK/Register_Chatbot_Extension.md)과 [Interaction 모델을 등록](/DevConsole/Guides/CEK/Register_Interaction_Model.md)한 후 배포 정보를 입력할 수 있습니다. Extension 등록 메뉴에서 **{{ book.DevConsole.cek_publishing }}**를 선택합니다.
+Clova developer console에서 [extension을 등록](/DevConsole/Guides/CEK/Register_Chatbot_Extension.md)하고 [Interaction 모델을 등록](/DevConsole/Guides/CEK/Register_Interaction_Model.md)한 후 배포 정보를 입력할 수 있습니다. Extension 등록 메뉴에서 **{{ book.DevConsole.cek_publishing }}**를 선택합니다.
 
 ![](/DevConsole/Resources/Images/DevConsole-Deployment_Info_Menu.png)
 
@@ -17,11 +17,11 @@ Clova developer console에서 [extension을 등록](/DevConsole/Guides/CEK/Regis
 
 ![](/DevConsole/Resources/Images/DevConsole-Input_Deployment_Info.png)
 
-Extension을 사용자에게 설명하기 위한 정보로서 Clova 앱의 **{{ book.DevConsole.ManageExtensions }}** 메뉴(Extension 스토어)에서 사용자에게 제공됩니다. 다음과 같은 정보들이 입력됩니다.
+배포 정보는 Extension을 사용자에게 설명하기 위한 정보로서 Clova 앱의 **{{ book.DevConsole.ManageExtensions }}** 메뉴(extension 스토어)에서 사용자에게 제공됩니다. 다음과 같은 정보들이 입력됩니다.
 
 * **{{ book.DevConsole.cek_category }}**: Extension의 종류로서 사용자가 extension 종류별로 목록을 확인하거나 검색할 때 이용됩니다.
 * **{{ book.DevConsole.cek_test_instructions }}**: [Extension 승인](#RequestExtensionSubmission) 프로세스에서 승인 담당자가 extension을 검증하는데 필요한 참고 정보로서 일반 사용자에게는 노출되지 않습니다. 안내 문구에 따라 작성합니다.
-* 서비스 국가 및 지역: 현재는 한국에만 extension을 배포할 수 있습니다.
+* **서비스 국가 및 지역**: 현재는 한국에만 extension을 배포할 수 있습니다.
 * **{{ book.DevConsole.cek_full_skill_desc }}**: **{{ book.DevConsole.ExtensionPage }}**에서 사용자에게 제공할 extension의 설명입니다. 안내 문구에 따라 작성합니다.
 * **{{ book.DevConsole.cek_short_skill_desc }}**: {{ book.DevConsole.StoreHome }}에서 프로모션 등의 안내 문구를 표시할 때 사용될 수 있는 설명입니다.
 * **{{ book.DevConsole.cek_example_phrases }}**: 사용자가 extension을 어떻게 사용할 수 있는지 보여주는 예시문입니다. **{{ book.DevConsole.ExtensionPage }}**에 표시됩니다. 특히, 첫 번째 예시문은 {{ book.DevConsole.StoreHome }}에서 extension 목록을 보여줄 때 표시됩니다.
@@ -29,7 +29,7 @@ Extension을 사용자에게 설명하기 위한 정보로서 Clova 앱의 **{{ 
 * **{{ book.DevConsole.cek_small_icon }}**: 작은 크기(108px X 108px)의 extension 아이콘 파일입니다. **{{ book.DevConsole.ManageExtensions }}**이나 **{{ book.DevConsole.ExtensionPage }}**에 표시됩니다.
 * **{{ book.DevConsole.cek_large_icon }}**: 큰 크기(512px X 512px)의 extension 아이콘 파일로서 추후 사용될 예정입니다.
 
-이렇게 입력된 정보는 Clova 앱 **{{ book.DevConsole.ManageExtensions }}** 메뉴(Extension 스토어)에서 다음과 같이 표시됩니다.
+이렇게 입력된 정보는 Clova 앱 **{{ book.DevConsole.ManageExtensions }}** 메뉴(extension 스토어)에서 다음과 같이 표시됩니다.
 
 | {{ book.DevConsole.StoreHome }} | {{ book.DevConsole.ExtensionPage }}   |
 |-------------------|-------------------|
@@ -69,15 +69,15 @@ Extension의 [배포 정보](#InputDeploymentInfo)와 [개인 정보 보호 및 
 
 ![](/DevConsole/Resources/Images/DevConsole-Extension_Submission_Process.png)
 
-등록한 extension 목록에서 **{{ book.DevConsole.cek_request_submit }}** 메뉴를 클릭하여 extension 심사를 신청할 수 있습니다.
+등록한 extension 목록에서 **{{ book.DevConsole.cek_request_submit }}** 메뉴를 눌러 extension 심사를 신청할 수 있습니다.
 
 ![](/DevConsole/Resources/Images/DevConsole-Submit_Extension_1.png)
 
-또는 [개인 정보 보호 및 규정 준수 정보](#InputComplianceInfo)를 입력하는 화면 마지막에 있는 **{{ book.DevConsole.cek_request_submit }}** 버튼을 클릭해도 됩니다.
+또는 [개인 정보 보호 및 규정 준수 정보](#InputComplianceInfo)를 입력하는 화면 마지막에 있는 **{{ book.DevConsole.cek_request_submit }}** 버튼을 눌러도 됩니다.
 
 ![](/DevConsole/Resources/Images/DevConsole-Submit_Extension_2.png)
 
-**{{ book.DevConsole.cek_request_submit }}**을 클릭하면 다음과 같이 운영자에게 해당 심사 신청에 대한 정보를 남길 수 있습니다. Extension의 첫 번째 심사 신청이라면 최초 심사 요청이라는 메시지와 어떤 extension인지 설명하는 메시지를 남기면 됩니다. Extension의 기능이나 interaction 모델을 업데이트했거나 반려된 extension을 수정하여 재심사를 요청할 때는 개선된 사항이나 반려 의견 반영 여부를 입력하면 됩니다.
+**{{ book.DevConsole.cek_request_submit }}**을 누르면 다음과 같이 운영자에게 해당 심사 신청에 대한 정보를 남길 수 있습니다. Extension의 첫 번째 심사 신청이라면 최초 심사 요청이라는 메시지와 어떤 extension인지 설명하는 메시지를 남기면 됩니다. Extension의 기능이나 interaction 모델을 업데이트했거나 반려된 extension을 수정하여 재심사를 요청할 때는 개선된 사항이나 반려 의견 반영 여부를 입력하면 됩니다.
 
 ![](/DevConsole/Resources/Images/DevConsole-Submission_Request_Message.png)
 
@@ -97,7 +97,7 @@ Extension을 심사할 때 살펴보는 기본 평가 항목은 다음과 같습
   * Extension의 설명, 카테고리, 검색 키워드와 같이 입력된 배포 정보가 extension에 맞게 입력되었는지 확인합니다.
   * Extension이 개인 정보 관리 규정 등 입력된 정책에 맞게 동작하는지 확인합니다.
 
-심사 중에 **{{ book.DevConsole.cek_cancel_review }}** 메뉴를 클릭하면 언제든지 심사 신청을 취소할 수 있습니다. 심사 신청을 취소하면 이전 상태로 돌아갑니다.
+심사 중에 **{{ book.DevConsole.cek_cancel_review }}** 메뉴를 누르면 언제든지 심사 신청을 취소할 수 있습니다. 심사 신청을 취소하면 이전 상태로 돌아갑니다.
 
 ![](/DevConsole/Resources/Images/DevConsole-Cancel_Submission.png)
 
@@ -105,6 +105,6 @@ Extension을 심사할 때 살펴보는 기본 평가 항목은 다음과 같습
 
 ![](/DevConsole/Resources/Images/DevConsole-Extension_Submission_Rejected.png)
 
-이때, **{{ book.DevConsole.cek_message }}**의 **{{ book.DevConsole.cek_view }}** 메뉴를 클릭하면 심사에 대한 피드백을 확인할 수 있습니다.
+이때, **{{ book.DevConsole.cek_message }}**의 **{{ book.DevConsole.cek_view }}** 메뉴를 누르면 심사에 대한 피드백을 확인할 수 있습니다.
 
 ![](/DevConsole/Resources/Images/DevConsole-Show_Submission_Feedback.png)

@@ -1,12 +1,12 @@
 #  개요
-이 문서는 Clova Chatbot extension(이하 Chatbot extension)에 대해 자세히 설명합니다. 이 문서를 통해 chatbot extension이 무엇이고 어떻게 동작하는지 파악할 수 있으며, chatbot extension과 관련된 가이드를 제공합니다.
+이 문서는 Clova Chatbot extension(이하 Chatbot extension)에 대해 자세히 설명합니다. 이 문서를 통해 chatbot extension이 무엇이고 어떻게 동작하는지 파악할 수 있으며, chatbot extension을 만들 수 있습니다.
 
 ## Chatbot extension이란? {#WhatisChatBotExt}
-Chatbot extension은 <a href="https://developers.naver.com/docs/clova/guide/" target="_blank">Clova</a>를 통해 사용자의 간단한 대화 요청이나 문의에 대해 답변하는 extension입니다. 주로, 사업이나 서비스의 고객 센터로 자주 유입되는 고객 문의를 처리하거나 소위 "심심이류"라고 하는 말벗 서비스와 같이 사용자와 간단히 대화하는 챗봇(chatbot)서비스를 제공하는데 사용됩니다. chatbot extension은 일반적인 extension과 달리 발화 유형에 정해진 응답을 하는 패턴의 대화 모델(이하 interaction 모델)을 가집니다. Chatbot extension은 다음과 같은 특징을 가집니다.
+Chatbot extension은 <a href="https://developers.naver.com/docs/clova/guide/" target="_blank">Clova</a>를 통해 사용자의 간단한 대화 요청이나 문의에 대해 답변하는 extension입니다. 주로, 사업이나 서비스의 고객 센터로 자주 유입되는 고객 문의를 처리하거나 소위 "심심이류"라고 하는 말벗 서비스와 같이 사용자와 간단히 대화하는 챗봇(chatbot)서비스를 제공하는데 사용됩니다. chatbot extension은 일반적인 extension과 달리 발화 유형에 고정된 응답을 하는 패턴의 대화 모델(이하 interaction 모델)을 가집니다. Chatbot extension은 다음과 같은 특징을 가집니다.
 
 * 정해진 유형으로 대화를 하기 때문에 interaction 모델이 비교적 간단합니다.
 * Chatbot extension의 소프트웨어 개발에 대한 부분은 Clova 플랫폼이 제공하기 때문에 별도의 extension 서버를 구축하거나 소프트웨어 개발을 하지 않아도 됩니다.
-* 소프트웨어 개발자가 아니더라도 interaction 모델만 만들수 있면 chatbot extension을 제공할 수 있으며, 시간과 비용이 많이 들지 않습니다.
+* 소프트웨어 개발자가 아니더라도 interaction 모델만 만들수 있으면 chatbot extension을 제공할 수 있으며, 시간과 비용이 많이 들지 않습니다.
 
 ![](/Resources/Images/Clova_Chatbot_Extension_Concept_Diagram.png)
 

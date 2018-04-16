@@ -10,9 +10,9 @@
 Chatbot extension을 배포하는 경우 [interaction 모델이 등록](/DevConsole/Guides/CEK/Register_Interaction_Model.md)되어 있어야 합니다. 정의된 interaction 모델은 빌드 과정을 거쳐야 새로 작성했거나 또는 업데이트한 내용을 [테스트](#TestInteractionModel)하거나 사용할 수 있습니다. 다음과 같이 정의된 interaction 모델을 빌드할 수 있습니다.
 
 <ol>
-  <li>등록한 extension 목록에서 interaction 모델을 빌드하려는 extension 항목의 <strong>{{ book.DevConsole.cek_edit }}</strong> 메뉴를 클릭합니다.</li>
+  <li>등록한 extension 목록에서 interaction 모델을 빌드하려는 extension 항목의 <strong>{{ book.DevConsole.cek_edit }}</strong> 메뉴를 누릅니다.</li>
   <img src="/DevConsole/Resources/Images/DevConsole-Interaction_Model_Menu.png" />
-  <li>화면 왼쪽 상단에 있는 <strong>{{ book.DevConsole.BuildButton }}</strong> 버튼을 클릭하면 interaction 모델을 빌드합니다. 빌드 시간은 interaction 모델의 데이터 양에 따라 달라질 수 있습니다.</li>
+  <li>화면 왼쪽 상단에 있는 <strong>{{ book.DevConsole.BuildButton }}</strong> 버튼을 누르면 interaction 모델을 빌드합니다. 빌드 시간은 interaction 모델의 데이터 양에 따라 달라질 수 있습니다.</li>
   <img src="/DevConsole/Resources/Images/DevConsole-Build_Interaction_Model.png" />
 </ol>
 
@@ -26,7 +26,7 @@ Chatbot extension을 배포하는 경우 [interaction 모델이 등록](/DevCons
 [Interaction 모델 빌드](#BuildInteractionModel)가 완료되면, interaction 모델을 테스트할 수 있습니다. 다음과 같이 발화문을 테스트해볼 수 있습니다.
 
 <ol>
-  <li>왼쪽 사이드 메뉴바 아래 <strong>{{ book.DevConsole.cek_test }}</strong> 메뉴를 클릭합니다. 메뉴를 클릭하면 <strong>{{ book.DevConsole.cek_interaction_model }}: {{ book.DevConsole.cek_test }}</strong> 화면이 표시됩니다.</li>
+  <li>왼쪽 사이드 메뉴바 아래 <strong>{{ book.DevConsole.cek_test }}</strong> 메뉴를 누릅니다. 메뉴를 누르면 <strong>{{ book.DevConsole.cek_interaction_model }}: {{ book.DevConsole.cek_test }}</strong> 화면이 표시됩니다.</li>
   <img src="/DevConsole/Resources/Images/DevConsole-Test_Menu.png" />
   <li><strong>{{ book.DevConsole.cek_builder_test_expression_title }}</strong> 필드에 테스트할 발화문을 입력하고 <strong>{{ book.DevConsole.cek_builder_test_request_test }}</strong> 버튼이나 <strong>엔터</strong> 키를 누릅니다.</li>
   <img src="/DevConsole/Resources/Images/DevConsole-Test_Utterance_Example.png" />
@@ -41,7 +41,7 @@ Chatbot extension을 배포하는 경우 [interaction 모델이 등록](/DevCons
 
 ## Clova 앱으로 chatbot extension 테스트하기 {#TestOnClovaApp}
 
-Chatbot extension을 실제 클라이언트인 Clova 앱에서 테스트해볼 수 있습니다. 이를 위해 extension 기본 정보를 등록하는 페이지의 **{{ book.DevConsole.cek_tester }}** 필드에 개발자 본인이나 extension을 테스트할 사람의 <strong>{{ book.OrientedService }} 계정</strong>을 입력해야 합니다. 계정을 추가한 후 **{{ book.DevConsole.cek_save }}** 버튼을 클릭하면 입력한 계정이 인증된 Clova 앱에서 개발 중인 extension을 테스트할 수 있습니다. Clova 앱에서 테스트를 중지하려면 입력한 계정 정보를 삭제하면 됩니다.
+Chatbot extension을 실제 클라이언트인 Clova 앱에서 테스트해볼 수 있습니다. 이를 위해 extension 기본 정보를 등록하는 페이지의 **{{ book.DevConsole.cek_tester }}** 필드에 개발자 본인이나 extension을 테스트할 사람의 <strong>{{ book.OrientedService }} 계정</strong>을 입력해야 합니다. 계정을 추가한 후 **{{ book.DevConsole.cek_save }}** 버튼을 누르면 입력한 계정이 인증된 Clova 앱에서 개발 중인 extension을 테스트할 수 있습니다. Clova 앱에서 테스트를 중지하려면 입력한 계정 정보를 삭제하면 됩니다.
 
 ![](/DevConsole/Resources/Images/DevConsole-Add_Tester_ID.png)
 

@@ -1,5 +1,5 @@
 # Chatbot extension 등록하기
-[Chatbot extension의 설계](/Design/Design_Guideline_For_Chatbot_Extension.md)를 거의 완료했다면 chatbot extension을 Clova developer console에 등록해야 합니다. CEK 메뉴 페이지에서 페이지 하단에 있는 **새로운 extension 만들기** 버튼을 클릭하면 신규 chatbot extension을 등록할 수 있습니다.
+[Chatbot extension의 설계](/Design/Design_Guideline_For_Chatbot_Extension.md)를 완료했다면 chatbot extension을 Clova developer console에 등록해야 합니다. CEK 메뉴 페이지에서 페이지 하단에 있는 **{{ book.cek_builder_new_extension_create }}** 버튼을 누르면 신규 chatbot extension을 등록할 수 있습니다.
 
 ![](/DevConsole/Resources/Images/DevConsole-First_Look_of_Extension_List.png)
 
@@ -35,9 +35,9 @@ Chatbot extension을 등록하는 과정에서 가장 먼저 할 일은 등록�
   </li>
   <li><strong>{{ book.DevConsole.cek_email }}</strong> 항목에 연락 가능한 이메일 주소를 입력합니다.</li>
   <li><strong>{{ book.DevConsole.cek_tester }}</strong> 항목에 개발 중인 extension을 테스트할 때 이용할 {{ book.OrientedService }} 계정을 입력하면 됩니다. 당장 입력하지 않아도 되며 추후 <a href="/DevConsole/Guides/CEK/Test_Chatbot_Extension.html">extension을 테스트</a>해야 할 때 이 필드에 값을 입력할 수 있습니다.</li>
-  <li>Extension 기본 정보를 모두 입력한 후 <strong>{{ book.DevConsole.cek_create }}</strong> 버튼을 클릭합니다.</li>
+  <li>Extension 기본 정보를 모두 입력한 후 <strong>{{ book.DevConsole.cek_create }}</strong> 버튼을 누릅니다.</li>
 </ol>
 
-Extension 기본 정보 입력이 끝나면 생성된 extension의 정보를 수정하는 화면으로 전환됩니다. 이때부터 페이지 하단에 있는 **{{ book.DevConsole.cek_save }}** 버튼을 클릭하여 중간 내용을 언제든지 저장할 수 있으며, 다음과 같이 CEK 메뉴에서 등록된 Chatbot extension 목록을 확인할 수 있습니다.
+Extension 기본 정보 입력이 끝나면 생성된 extension의 정보를 수정하는 화면으로 전환됩니다. 이때부터 페이지 하단에 있는 **{{ book.DevConsole.cek_save }}** 버튼을 눌러 중간 내용을 언제든지 저장할 수 있으며, 다음과 같이 CEK 메뉴에서 등록된 chatbot extension 목록을 확인할 수 있습니다.
 
 ![](/DevConsole/Resources/Images/DevConsole-Extension_List_after_Creation.png)
