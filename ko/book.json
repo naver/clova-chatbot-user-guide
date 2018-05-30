@@ -1,13 +1,13 @@
 {
-  "title": "Clova Chatbot extension 가이드",
-  "description": "이 문서는 Clova가 제공하는 chatbot extension과 이를 통해 간단한 대화나 문의 답변을 수행하는 서비스를 Clova로 제공하는 방법을 설명합니다.",
+  "title": "Clova Chatbot 사용자 가이드",
+  "description": "Clova Chatbot 사용자 가이드는 Clova가 제공하는 Clova Chatbot을 설명하고, Clova Chatbot을 사용해 간단한 대화나 문의 답변을 수행하는 서비스를 Clova로 제공하는 방법을 설명합니다.",
   "language": "ko",
   "direction": "ltr",
   "author": "NAVER Corporation",
   "variables": {
     "ClassifiedInfo": "Confidential",
-    "DocVersion": "v0.3",
-    "TargetCountryCode": "KR",
+    "DocVersion": "v0.4",
+    "TargetCountryCode": "KR",    
     "DocOwner": "NAVER",
     "OrientedService": "NAVER",
     "TargetServiceForClientAuth": "NAVER",
@@ -117,13 +117,14 @@
   },
   "pdf": {
     "fontSize": 11,
+    "fontFamily": "Malgun Gothic",
     "margin": {
       "top": 40,
       "bottom": 40,
       "left": 30,
       "right": 30
     },
-    "paperSize": "a3"
+    "paperSize": "a4"
   },
   "plugins": ["-search"]
 }

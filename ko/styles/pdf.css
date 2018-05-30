@@ -91,7 +91,7 @@ td img {
 
 img {
   padding: 10px;
-  margin: 2px 2px 2px 2px;
+  margin: 2px 2px 2px 2px;  
   -moz-box-shadow:    3px 3px 10px 3px #ccc;
   -webkit-box-shadow: 3px 3px 10px 3px #ccc;
   box-shadow:         3px 3px 10px 3px #ccc;
@@ -122,4 +122,16 @@ blockquote p.rdiag {
   text-align: right;
   max-width:500px;
   padding-left:10px;
+}
+
+h1 {
+    font-size: 32px; /* 24pt */
+}
+
+h2 {
+    font-size: 20px; /* 14.5pt */
+}
+
+h3 {
+    font-size: 15px; /* 11pt */
 }
