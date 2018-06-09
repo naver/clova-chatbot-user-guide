@@ -5,7 +5,6 @@
   "direction": "ltr",
   "author": "NAVER Corporation",
   "variables": {
-    "docTitle": "Clova Chatbot 사용자 가이드",
     "ClassifiedInfo": "Confidential",
     "DocVersion": "v0.4",
     "TargetCountryCode": "KR",
@@ -13,7 +12,6 @@
     "OrientedService": "NAVER",
     "TargetServiceForClientAuth": "NAVER",
     "ReleaseYear": "2018",
-    "docType": "web",
     "DevConsole": {
       "ManageExtensions": "확장 서비스 관리",
       "ExtensionPage": "Extension 페이지",
