@@ -1,4 +1,4 @@
-{% if output.name == "ebook" %}
+{% if book.docType == "ebook" %}
 # 문서 정보 {#DocOverview}
 
 ## 문서 개요 {#DocDesc}
@@ -14,20 +14,20 @@
 이 문서의 내용에 오류가 있거나 내용과 관련한 의문 사항이 있으면 지정된 Clova 제휴 담당자에게 문의합니다.
 
 {% else %}
-# {{ config.title }}
+# {{ book.docTitle }}
 
 Clova Chatbot은 <a href="https://developers.naver.com/docs/clova/guide/" target="_blank">Clova</a>를 통해 사용자의 간단한 대화 요청이나 문의에 답변하는 [Clova Extension](/Terms.md#ClovaExtension)입니다. 고객 센터로 자주 유입되는 고객 문의를 처리하거나 "심심이"와 같은 말벗 서비스처럼 사용자와 간단히 대화하는 챗봇(chatbot) 서비스를 제공하는 데 주로 사용합니다.
 
-## {{ config.title }} 개요 {#UserGuideOverview}
+## {{ book.docTitle }} 개요 {#UserGuideOverview}
 
-{{ config.title }}는 Clova가 제공하는 Clova Chatbot을 설명하고, Clova Chatbot을 사용해 간단한 대화나 문의 답변을 수행하는 서비스를 Clova로 제공하는 방법을 설명합니다. {{ config.title }}의 대상 독자는 Clova Chatbot을 사용해 사용자와 간단한 대화를 수행하는 서비스를 만들거나 고객 지원을 위해 문의에 대한 답변 서비스를 제공하려는 서비스 담당자입니다.
+{{ book.docTitle }}는 Clova가 제공하는 Clova Chatbot을 설명하고, Clova Chatbot을 사용해 간단한 대화나 문의 답변을 수행하는 서비스를 Clova로 제공하는 방법을 설명합니다. {{ book.docTitle }}의 대상 독자는 Clova Chatbot을 사용해 사용자와 간단한 대화를 수행하는 서비스를 만들거나 고객 지원을 위해 문의에 대한 답변 서비스를 제공하려는 서비스 담당자입니다.
 
 <div class="note"><p><strong>Note!</strong></p>
 <p>Clova Chatbot은 개발이 계속 진행되고 있습니다. 따라서 이 글의 내용은 언제든지 변경될 수 있습니다.</p></div>
 
-## {{ config.title }} 구성 {#Toc}
+## {{ book.docTitle }} 구성 {#Toc}
 
-{{ config.title }}의 내용은 다음과 같습니다.
+{{ book.docTitle }}의 내용은 다음과 같습니다.
 
 * [Clova Chatbot 개요](/Overview.md)
    * [Clova Chatbot이란?](/Overview.md#WhatisChatBotExt)
