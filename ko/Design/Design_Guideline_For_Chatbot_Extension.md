@@ -195,4 +195,4 @@ Clova Chatbot을 설계할 때 다음과 같은 사회적인 또는 법적인 �
 
 Clova Chatbot을 개발할 때 입력한 질문 유형의 질문 예시에 맞게 사용자가 질문하지 않을 수 있습니다. 사용자가 실제 Clova를 사용하는 방식에 차이가 있을 수 있고, 입력한 질문 유형이 사용자의 모든 사용 패턴을 대변했다고 할 수 없습니다. 즉, 사용자는 예상과 다르게 Clova Chatbot을 사용하려 할 수 있습니다. 따라서 Clova Chatbot을 배포한 이후에도 Clova Chatbot의 질문 유형이나 질문 예시를 지속적으로 개선하는 활동을 해야 사용자의 만족도를 향상시킬 수 있습니다.
 
-Clova Chatbot을 등록한 후 Clova 플랫폼이 제공하는 통계 데이터(추후 제공 예정)나 유입된 사용자 [대화 기록](/DevConsole/Guides/CEK/Update_Chatbot_Extension.md#UpdateUsingUtteranceHistor)을 분석해 꾸준히 Clova Chatbot을 업데이트해야 합니다.
+Clova Chatbot을 등록한 후 Clova 플랫폼이 제공하는 통계 데이터(추후 제공 예정)나 유입된 사용자 [대화 기록](/DevConsole/Guides/CEK/Update_Chatbot_Extension.md#UpdateUsingUtteranceHistory)을 분석해 꾸준히 Clova Chatbot을 업데이트해야 합니다.
