@@ -15,7 +15,7 @@
 <img src="/DevConsole/Resources/Images/chatbot-2-1-101.png" />
 3. 약관 동의와 휴대폰 인증을 완료한 다음 **톡톡 계정 만들기**를 클릭합니다.  
 <img src="/DevConsole/Resources/Images/chatbot-2-1-102.png" />
-4. **톡톡 계정 만들기**에서 연결할 서비스를 선택하고 필요한 정보를 입력합니다. 프로필명을 입력할 때 `[테스트]`를 프로필명 앞에 넣으면 톡톡 가맹점 찾기에서 제외되는 테스트 계정을 생성할 수 있습니다.  
+4. **톡톡 계정 만들기**에서 연결할 서비스를 선택하고 필요한 정보를 입력합니다. 지금 연결할 서비스가 없으면 나중에 다시 선택할 수 있습니다. 프로필명을 입력할 때 `[테스트]`를 프로필명 앞에 넣으면 톡톡 가맹점 찾기에서 제외되는 테스트 계정을 생성할 수 있습니다.  
 <img src="/DevConsole/Resources/Images/chatbot-2-1-103.png" />
 5. 계정을 생성한 다음 검수가 완료되면 네이버톡톡 계정을 사용할 수 있습니다.
 
@@ -28,7 +28,7 @@
 <img src="/DevConsole/Resources/Images/chatbot-2-1-106.png" />
 3. **계정관리 홈**에서 **챗봇 API > API 설정**을 클릭합니다.
 4. 약관 동의 후 설정 페이지가 나타나면 **보내기 API Authorization 생성**을 클릭합니다.
-5. **Webhook** 메뉴에 <a href="https://www.ncloud.com/" target="_blank">네이버 클라우드 플랫폼</a>의 API Gateway에서 만든 경로(예: `https://kaa.clova.ai/chatbot/webhook/talktalk?code=ai.clova.extension.test`)를 입력한 다음 **등록**을 클릭합니다.
+5. **Webhook** 메뉴에 `https://kaa.clova.ai/chatbot/webhook/talktalk?code=Extenstion ID`와 같은 형태의 경로를 입력한 다음 **등록**을 클릭합니다. Extension ID는 [Clova Chatbot 기본 정보](/DevConsole/Guides/CEK/Register_Chatbot_Extension.md#InputExtensionInfo)를 설정할 때 입력한 값입니다. <a href="https://developers.naver.com/console/clova/cek/#/list" target="_blank">CEK 메뉴</a>의 ** Extension 정보** 페이지에서 확인할 수 있습니다.
 6. **이벤트 선택 > 이벤트 변경** 메뉴를 클릭한 다음 **send**로 설정됐는지 확인합니다.
 7. **보내기 API** 메뉴 있는 Access Token 값을 복사해 기록합니다.
 8. Clova Chatbot 창의 메뉴에서 **설정**을 클릭합니다.

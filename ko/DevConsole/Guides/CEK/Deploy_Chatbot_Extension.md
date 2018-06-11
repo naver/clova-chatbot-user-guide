@@ -28,7 +28,7 @@ Extension 등록 메뉴에서 **Extension 스토어 노출 정보**를 선택한
 * Extension 스토어용 발화 문장: 사용자가 Clova Chatbot을 어떻게 사용할 수 있는지 보여 주는 예시문입니다. **확장 서비스 관리** 메뉴의 Extension 설명 화면에 표시됩니다. 특히, 첫 번째 예시문은 **확장 서비스 관리** 화면에서 Extension 목록을 보여 줄 때 표시됩니다.
 * 검색 키워드 (선택): 사용자가 특정 키워드로 Extension을 검색할 때 그 검색 결과에 Extension이 나타날 수 있게 합니다.
 * 작은 아이콘: 작은 크기(108px x 108px)의 Extension 아이콘 파일입니다. **확장 서비스 관리** 화면이나 Extension 설명 화면에 표시됩니다.
-* 큰 아이콘: 큰 크기(512px x 512px)의 Extension 아이콘 파일입니다. 추후 사용될 예정입니다.
+* 큰 아이콘: 큰 크기(512px x 512px)의 Extension 아이콘 파일입니다.
 
 이렇게 입력된 정보는 Clova 앱의 **확장 서비스 관리** 메뉴에서 다음과 같이 표시됩니다.
 
@@ -88,11 +88,11 @@ Clova Chatbot의 [배포 정보](#InputDeploymentInfo)와 [개인정보 보호 �
 Clova Chatbot을 심사할 때 살펴보는 기본 평가 항목은 다음과 같습니다.
 
 * Clova Chatbot 검증
-   - Clova Chatbot서비스에 적합한 용어를 사용하고 있는지 확인합니다.
-   - Clova Chatbot의 챗봇 대화를 검증합니다.
+  - Clova Chatbot서비스에 적합한 용어를 사용하고 있는지 확인합니다.
+  - Clova Chatbot의 챗봇 대화를 검증합니다.
 * 배포 정보 검증
-   - Clova Chatbot의 설명, 카테고리, 검색 키워드와 같이 입력된 배포 정보가 Clova Chatbot에 맞게 입력되었는지 확인합니다.
-   - Clova Chatbot이 개인정보 관리 규정 등 입력된 정책에 맞게 작동하는지 확인합니다.
+  - Clova Chatbot의 설명, 카테고리, 검색 키워드와 같이 입력된 배포 정보가 Clova Chatbot에 맞게 입력되었는지 확인합니다.
+  - Clova Chatbot이 개인정보 관리 규정 등 입력된 정책에 맞게 작동하는지 확인합니다.
 
 심사 중에 **심사 취소** 메뉴를 클릭하면 언제든지 심사 신청을 취소할 수 있습니다. 심사 신청을 취소하면 이전 상태로 돌아갑니다.
 
