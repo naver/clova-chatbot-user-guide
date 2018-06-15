@@ -60,7 +60,11 @@ LINE과 연동하는 방법은 다음과 같습니다.
 
 LINE과 Clova Chatbot을 연동하려면 LINE 계정이 있어야 합니다. LINE 계정을 생성하는 방법은 다음과 같습니다.
 
+<<<<<<< HEAD
 1. <a href="https://entry-at.line.me/" target="_blank">LINE Business Center</a>에 접속해 계정을 생성합니다.  
+=======
+1. <a href="https://entry-at.line.me/" target="_blank">LINE Business Center</a>에 접속해 계정을 생성합니다.
+>>>>>>> 3d3b7a4... Correct broken link
 <img src="/DevConsole/Resources/Images/chatbot-2-2-101.png" />
 2. 계정 정보를 입력해 계정 생성을 신청합니다.
 <img src="/DevConsole/Resources/Images/chatbot-2-2-102.png" />
