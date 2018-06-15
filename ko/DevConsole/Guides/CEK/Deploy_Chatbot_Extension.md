@@ -10,7 +10,7 @@ Clova Chatbot을 배포할 때 일반적으로 다음 항목을 수행해야 합
 
 ## 배포 정보 입력 {#InputDeploymentInfo}
 
-href="https://developers.naver.com/console/clova/" target="_blank">Clova Developers Console</a>에서 배포 정보를 입력할 수 있습니다.
+<a href="https://developers.naver.com/console/clova/" target="_blank">Clova Developers Console</a>에서 배포 정보를 입력할 수 있습니다.
 
 Extension 등록 메뉴에서 **Extension 스토어 노출 정보**를 선택한 다음 배포 정보를 입력합니다.
 
