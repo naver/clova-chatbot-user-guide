@@ -28,7 +28,7 @@
 <img src="/DevConsole/Resources/Images/chatbot-2-1-106.png" />
 3. **계정관리 홈**에서 **챗봇 API > API 설정**을 클릭합니다.
 4. 약관 동의 후 설정 페이지가 나타나면 **보내기 API Authorization 생성**을 클릭합니다.
-5. **Webhook** 메뉴에 `https://kaa.clova.ai/chatbot/webhook/talktalk?code=Extenstion ID`와 같은 형태의 경로를 입력한 다음 **등록**을 클릭합니다. Extension ID는 [Clova Chatbot 기본 정보](/DevConsole/Guides/CEK/Register_Chatbot_Extension.md#InputExtensionInfo)를 설정할 때 입력한 값입니다. <a href="https://developers.naver.com/console/clova/cek/#/list" target="_blank">CEK 메뉴</a>의 ** Extension 정보** 페이지에서 확인할 수 있습니다.
+5. **Webhook** 메뉴에 `https://kaa.clova.ai/chatbot/webhook/talktalk?code=Extenstion ID`와 같은 형태의 경로를 입력한 다음 **등록**을 클릭합니다. 'Extension ID'는 [Clova Chatbot 기본 정보](/DevConsole/Guides/CEK/Register_Chatbot_Extension.md#InputExtensionInfo)를 설정할 때 입력한 값입니다. <a href="https://developers.naver.com/console/clova/cek/#/list" target="_blank">CEK 메뉴</a>의 **Extension 정보** 페이지에서 확인할 수 있습니다.
 6. **이벤트 선택 > 이벤트 변경** 메뉴를 클릭한 다음 **send**로 설정됐는지 확인합니다.
 7. **보내기 API** 메뉴 있는 Access Token 값을 복사해 기록합니다.
 8. Clova Chatbot 창의 메뉴에서 **설정**을 클릭합니다.
@@ -64,13 +64,18 @@ LINE 계정 생성이 끝나면 다음과 같이 LINE 계정을 Clova Chatbot과
 <img src="/DevConsole/Resources/Images/chatbot-2-2-203.png" />
 3. **LINE Developers**를 클릭합니다.  
 <img src="/DevConsole/Resources/Images/chatbot-2-2-204.png" />
-4. LINE Developers의 **Channel settings** 화면에서 **Channel ID**의 값과 **Channel secret**의 값, **Channel access token**의 값을 확인하고 복사해 기록합니다.  
+4. LINE Developers의 메뉴에서 **Channel settings**를 클릭합니다.
+5. **Channel settings** 화면의 **Basic information**에서 **Channel ID**의 값과 **Channel secret**의 값을 확인하고 복사해 기록합니다.  
 <img src="/DevConsole/Resources/Images/chatbot-2-2-205.png" />
-5. Clova Chatbot 창의 메뉴에서 **설정**을 클릭합니다.
-6. **설정** 화면에서 **채널** 탭을 클릭합니다.
-7. **채널 연동**에서 LINE에 있는 **설정**을 클릭합니다.  
+6. **Messaging settings**의 **Channel access token**에서 **Issue**를 클릭해 새로운 Channel access token을 생성한 다음 값을 확인하고 복사해 기록합니다.  
+<img src="/DevConsole/Resources/Images/chatbot-2-2-206.png" />
+7. **Messaging settings**의 **Use webhooks**에서 **Enabled**를 선택하고 **Update**를 클릭합니다.
+8. **Webhook URL**의 **https://**<!-- -->에 `kaa.clova.ai/chatbot/webhook/talktalk?code=Extenstion ID`와 같은 형태의 경로를 입력한 다음 **Update**를 클릭하고 **Verify**를 클릭합니다. 'Extension ID'는 [Clova Chatbot 기본 정보](/DevConsole/Guides/CEK/Register_Chatbot_Extension.md#InputExtensionInfo)를 설정할 때 입력한 값입니다. <a href="https://developers.naver.com/console/clova/cek/#/list" target="_blank">CEK 메뉴</a>의 **Extension 정보** 페이지에서 확인할 수 있습니다.
+9. Clova Chatbot 창의 메뉴에서 **설정**을 클릭합니다.
+10. **설정** 화면에서 **채널** 탭을 클릭합니다.
+11. **채널 연동**에서 LINE에 있는 **설정**을 클릭합니다.  
 <img src="/DevConsole/Resources/Images/ConnectLINE.png" />
-8. **설정** 대화 상자의 **채널ID**와 **채널 Secret**, **Access Token**에 LINE Developers에서 기록해 둔 Channel ID의 값과 Channel secret의 값, Channel access token의 값을 입력합니다.
-9. **저장**을 클릭해 설정 내용을 적용합니다.
-10. LINE 연동을 사용하려면 LINE의 ON/OFF 상태를 **ON**으로 설정하고 **저장**을 클릭해 설정 내용을 적용합니다.
+12. **설정** 대화 상자의 **채널ID**와 **채널 Secret**, **Access Token**에 LINE Developers에서 기록해 둔 Channel ID의 값과 Channel secret의 값, Channel access token의 값을 입력합니다.
+13. **저장**을 클릭해 설정 내용을 적용합니다.
+14. LINE 연동을 사용하려면 LINE의 ON/OFF 상태를 **ON**으로 설정하고 **저장**을 클릭해 설정 내용을 적용합니다.
 
