@@ -16,7 +16,7 @@
 {% else %}
 # {{ config.title }}
 
-Clova Chatbot은 <a href="https://developers.naver.com/docs/clova/guide/" target="_blank">Clova</a>를 통해 사용자의 간단한 대화 요청이나 문의에 답변하는 [Clova Extension](/Terms.md#ClovaExtension)입니다. 고객 센터로 자주 유입되는 고객 문의를 처리하거나 "심심이"와 같은 말벗 서비스처럼 사용자와 간단히 대화하는 챗봇(chatbot) 서비스를 제공하는 데 주로 사용합니다.
+Clova Chatbot은 <a href="https://clova.ai/" target="_blank">Clova</a>를 통해 사용자의 간단한 대화 요청이나 문의에 답변하는 [Clova Extension](/Terms.md#ClovaExtension)입니다. 고객 센터로 자주 유입되는 고객 문의를 처리하거나 "심심이"와 같은 말벗 서비스처럼 사용자와 간단히 대화하는 챗봇(chatbot) 서비스를 제공하는 데 주로 사용합니다.
 
 ## {{ config.title }} 개요 {#UserGuideOverview}
 
