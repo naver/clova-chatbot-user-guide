@@ -1,7 +1,8 @@
 # 네이버톡톡과 LINE 연동
 
-네이버톡톡과 LINE을 연동하면 Clova Chatbot으로 사용자와 대화할 때 Clova 서비스를 사용하지 않고 네이버톡톡과 LINE으로 대화할 수 있습니다.
+네이버톡톡과 LINE을 연동하면 Clova Chatbot으로 사용자와 대화할 때 Clova 서비스를 사용하지 않고 네이버톡톡과 LINE으로 대화할 수 있습니다. 네이버톡톡과 LINE 연동에 대한 자세한 설명은 다음 문서를 참고하십시오.
 
+<<<<<<< HEAD
 ## 네이버톡톡 연동 {#HowToConnectToktok}
 
 네이버톡톡과 연동하는 방법은 다음과 같습니다.
@@ -102,3 +103,7 @@ LINE 계정 생성이 끝나면 LINE Business Center에서 다음과 같이 webh
 6. LINE의 ON/OFF 상태를 **ON**으로 설정하고 **저장**을 클릭해 설정 내용을 적용합니다.
 7. Clova Chatbot 창의 메뉴에서 **학습**을 클릭해 [챗봇 대화 학습](/DevConsole/Guides/CEK/Test_Chatbot_Extension.md#BuildInteractionModel)을 시작합니다.
 8. 챗봇 대화 학습이 끝나면 [Clova Chatbot 심사와 배포](/DevConsole/Guides/CEK/Deploy_Chatbot_Extension.md)를 완료합니다.
+=======
+* <a href="http://docs.ncloud.com/ko/chatbot/chatbot-2-2.html" target="_blank">네이버톡톡 연동</a>
+* <a href="http://docs.ncloud.com/ko/chatbot/chatbot-2-1.html" targe="_blank">LINE 연동</a>
+>>>>>>> de57584... Remove legacy content for Chatbot v2.0 and add links that refer the guide for Chatbot v3.0 in NCP dev site

@@ -1,6 +1,6 @@
 ## Clova Extensions Kit 메뉴 {#UsingCEKMenu}
 
-Clova Chatbot을 등록 및 배포할 때는 Clova Developers Console의 **Clova Extensions Kit** 메뉴(이하 CEK 메뉴)를 사용합니다. CEK 메뉴를 통해 Clova Chatbot을 등록하고, <a href="https://developers.naver.com/console/clova/guide/CEK/CEK_Overview.md" target="_blank">Clova Extensions Kit</a>가 Clova와 Clova Chatbot 사이에서 정보를 교환하기 위한 서버 연동 정보를 입력합니다. 또한 사용자의 질문을 의도에 맞게 분석하기 위한 챗봇 대화를 정의합니다.
+Clova Chatbot을 등록 및 배포할 때는 Clova Developers Console의 **Clova Extensions Kit** 메뉴(이하 CEK 메뉴)를 사용합니다. CEK 메뉴를 통해 Clova Chatbot을 등록하고, <a href="https://developers.naver.com/console/clova/guide/CEK/CEK_Overview.md" target="_blank">Clova Extensions Kit</a>가 Clova와 Clova Chatbot 사이에서 정보를 교환하기 위한 서버 연동 정보를 입력합니다. 또한 사용자의 발화를 의도에 맞게 분석하기 위한 챗봇 대화를 정의합니다.
 
 다음과 같이 Clova Developers Console의 메뉴나 화면에서 **Clova Extensions Kit β**를 클릭하면 CEK 메뉴로 진입합니다.
 

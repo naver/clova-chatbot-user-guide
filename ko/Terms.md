@@ -20,7 +20,7 @@ Clova 플랫폼과 연동하는 클라이언트 기기나 [Clova Extension](#Clo
 
 * 클라이언트 기기 등록 및 클라이언트 인증 정보 제공(추후 제공 예정)
 * [Clova Extension](#ClovaExtension) 등록 및 배포
-* [Interaction 모델](#InteractionModel) 등록
+* [대화 모델](#DialogueModel) 등록
 * Clova 서비스 관련 통계 자료 제공(추후 제공 예정)
 
 ### Clova Extension {#ClovaExtension}
@@ -53,6 +53,6 @@ NAVER가 개발해 iOS나 Android 플랫폼으로 배포한 Clova 앱입니다. 
 
 [Clova Extension](#ClovaExtension)의 다른 표현입니다.
 
-### Interaction 모델 {#InteractionModel}
+### 대화 모델 {#DialogueModel}
 
-[Custom Extension](#CustomExtension)이 사용자의 음성에서 인식된 요청을 Clova에 전달하기 위해 정형화된 형식(JSON)으로 변환하는 규칙의 명세입니다. Interaction 모델에 관한 더 자세한 내용은 "<a href="https://developers.naver.com/docs/clova/guide/Design/Design_Guideline_For_Extension.md" target="_blank">Extension 디자인 가이드라인</a>"의 '<a href="https://developers.naver.com/docs/clova/guide/Design/Design_Guideline_For_Extension.md#DefineInteractionModel" target="_blank">Interaction 모델 정의</a>'와 "<a href="https://developers.naver.com/docs/clova/guide/DevConsole/Guides/CEK/Register_Interaction_Model.md" target="_blank">Interaction 모델 등록하기</a>"를 참고합니다.
+[Clova Chatbot](#ChatbotExtension)이 사용자의 음성에서 인식된 요청을 Clova에 전달하기 위해 정형화된 형식(JSON)으로 변환하는 규칙의 명세입니다. 대화 모델에 관한 더 자세한 내용은 '<a href="/Design/Design_Guideline_For_Chatbot_Extension.md#DefineDialogueModel" target="_blank">대화 모델 정의</a>'를 참고합니다.
