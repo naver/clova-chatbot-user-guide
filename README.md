@@ -1,66 +1,11 @@
-## Introduction
+## 소개
+이 저장소는 [NAVER 개발자 센터](https://developers.naver.com/main/)에 [Clova Client Developer Guide](https://developers.naver.com/docs/clova/chatbot/) 문서를 배포하기 위해 생성되었습니다.
 
-This repository is created for managing and deploying [Clova Chatbot extension guide](https://pages.oss.navercorp.com/JTF-P6/chatbot_technical_doc/) content. [GitBook](https://toolchain.gitbook.com/) is used for building document in PDF format and web format.
+문서에 대한 피드백은 [NAVER 개발자 센터 포럼](http://forum.developers.naver.com/)을 이용하거나 이 저장소에 대한 [이슈](https://github.com/naver/clova-chatbot-user-guide/issues)를 등록해주시면 됩니다.
 
-See the following sections for more details:
+## 저작권
 
-* [How to build documentation](#HowToBuild)
-* [Branches](#Branches)
-* [Releases](#Releases)
+ⓒ NAVER Corporation All Rights Reserved.
 
-<a name="HowToBuild" />
-
-## How to build documentation
-
-Prepare the following tools and library:
-
-* [`npm`](https://www.npmjs.com/get-npm)
-* [`gitbook-cli`](https://toolchain.gitbook.com/setup.html)
-* [`calibre`](https://toolchain.gitbook.com/ebook.html)
-
-> Calibre application is required for PDF documentation build. Make sure put the `ebook-convert` bin file to the $PATH contained in Calibre application.
-
-> You can also make documentation build environment with Docker. See [Setup GitBook env. with Docker](https://oss.navercorp.com/JTF-P6/platform_technical_doc/wiki/Setup-GitBook-env-with-Docker)
-
-To build a documentation, following next steps:
-
-1. Clone this repository.
-
-```bash
-git clone https://oss.navercorp.com/JTF-P6/chatbot_technical_doc/.git
-```
-2. (Required one time) Install required gitbook plugins.
-
-```bash
-gitbook install
-```
-
-3. Run one of the following commands:
-
-```bash
-# If you want to make PDF file.
-gitbook pdf . book.pdf
-
-# If you want to make web content in ./book directory
-gitbook build . book
-
-# If you want to run web server with GitBook web content. You can access the web server at http://localhost:4000.
-gitbook serve
-```
-
-<a name="Branches" />
-
-## Branches
-
-Due to the various purposes, this repository has the following branches:
-
-<ul>
-  <li>Common branches
-    <ul>
-      <li><strong>document</strong><br />Main branch that holds whole content of Clova developer guide. Working branches are forked from this branch and after job is done the branches are merged back to this branch.</li>
-      <li><strong>master</strong> (document -> master)<br />Branch for internal documentation release</li>
-    </ul>
-  </li>
-</ul>
-
-<a name="Releases" />
+이 문서는 NAVER㈜의 지적 자산이므로 NAVER㈜의 승인 없이 이 문서를 다른 용도로 임의 변경하여 사용할 수 없습니다.
+이 문서는 정보제공의 목적으로만 제공됩니다. NAVER㈜는 이 문서에 수록된 정보의 완전성과 정확성을 검증하기 위해 노력하였으나, 발생할 수 있는 내용상의 오류나 누락에 대해서는 책임지지 않습니다. 따라서 이 문서의 사용이나 사용 결과에 따른 책임은 전적으로 사용자에게 있으며, NAVER㈜는 이에 대해 명시적 혹은 묵시적으로 어떠한 보증도 하지 않습니다. 관련 URL 정보를 포함하여 이 문서에서 언급한 특정 소프트웨어 상품이나 제품은 해당 소유자의 저작권법을 따르며, 해당 저작권법을 준수하는 것은 사용자의 책임입니다.
